@@ -9,21 +9,12 @@ using TMPro;
 public class rsGame
 {
     public List<infoRsSO> infos;
-    public List<treatData> treatButtonsInfo;
+    public List<treatDataSO> treatButtonsInfo;
 }
 
-[Serializable]
-public class treatData
-{
-    public string treatName;
-    public int treatCost;
-    public bool isDark;
-    [Header("Stats treated")]
-    public List<bool> treatedStats; // 0: autonomy, 1: social, 2: competence
-}
 public class RsController : MonoBehaviour
 {
-    [SerializeField] private List<rsGame> rsGames;
+    [SerializeField] private List<rsGame> GameList;
     [SerializeField] private List<GameObject> infos;
     [SerializeField] private List<GameObject> treat;
 
@@ -44,13 +35,13 @@ public class RsController : MonoBehaviour
     public void NextGame()
     {
         currentGameIndex++;
-        if (currentGameIndex < rsGames.Count)
+        if (currentGameIndex < GameList.Count)
         {
             updateInfos(currentGameIndex);
         }
     }
 
-    private void updateInfos(int gameIndex)
+    private void updateInfos(int p_gameIndex)
     {
         for (int i = 0; i < infos.Count; i++)
         {
@@ -58,9 +49,9 @@ public class RsController : MonoBehaviour
             TextMeshProUGUI userName = infos[i].transform.Find("UserName").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI message = infos[i].transform.Find("Commentary").GetComponent<TextMeshProUGUI>();
 
-            if (i < rsGames[gameIndex].infos.Count)
+            if (i < GameList[p_gameIndex].infos.Count)
             {
-                infoRsSO infoData = rsGames[gameIndex].infos[i];
+                infoRsSO infoData = GameList[p_gameIndex].infos[i];
                 profilePicture.sprite = infoData.commentProfilePicture;
                 userName.text = infoData.commentUserName;
                 message.text = infoData.commentMessage;
@@ -84,9 +75,9 @@ public class RsController : MonoBehaviour
             Image socialIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Social").GetComponent<Image>();
             Image competenceIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Competence").GetComponent<Image>();
 
-            if (i < rsGames[gameIndex].treatButtonsInfo.Count)
+            if (i < GameList[p_gameIndex].treatButtonsInfo.Count)
             {
-                treatData treatData = rsGames[gameIndex].treatButtonsInfo[i];
+                treatDataSO treatData = GameList[p_gameIndex].treatButtonsInfo[i];
                 treatName.text = treatData.treatName;
                 treatCost.text = treatData.treatCost.ToString() + "€";
 
@@ -108,9 +99,9 @@ public class RsController : MonoBehaviour
 
 
 
-    public void treatDataBtn()
+    public void treatDataBtn(TextMeshProUGUI p_treatCost)
     {
-
+        
     }
 
     // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>
