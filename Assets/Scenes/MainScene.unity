@@ -1689,6 +1689,7 @@ GameObject:
   - component: {fileID: 328332226}
   - component: {fileID: 328332229}
   - component: {fileID: 328332230}
+  - component: {fileID: 328332231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1735,7 +1736,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 0
@@ -1763,8 +1764,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328332225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.029418815, y: -0.91485685, z: 0.06782794, w: -0.39695197}
-  m_LocalPosition: {x: -0.14398384, y: 0.94096446, z: 0.15918922}
+  m_LocalRotation: {x: 0.4235786, y: 0.56619895, z: -0.56619895, w: 0.4235786}
+  m_LocalPosition: {x: 0.456, y: 0.844, z: 0.0642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1848,6 +1849,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &328332231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328332225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7d8d4648ca13d46b406b53d438d6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NearClipOverride
 --- !u!1 &334826047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10530,8 +10543,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4591980521461666315}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.029418815, y: -0.91485685, z: 0.06782794, w: -0.39695197}
-  m_LocalPosition: {x: -0.14398384, y: 0.94096446, z: 0.15918922}
+  m_LocalRotation: {x: 0.4235786, y: 0.56619895, z: -0.56619895, w: 0.4235786}
+  m_LocalPosition: {x: 0.456, y: 0.844, z: 0.0642}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10904,7 +10917,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 0.01
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
