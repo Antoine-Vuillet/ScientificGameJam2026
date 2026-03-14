@@ -12,6 +12,8 @@ public class GameScript : MonoBehaviour
 {
     private stats gameStats;
     private int patternCount = 0;
+    public int maxMoney = 10;
+    public int usedMoney;
 
 
     private void Start()
@@ -21,7 +23,7 @@ public class GameScript : MonoBehaviour
         gameStats.social = 0;
     }
 
-    private void SetGameStats(int autonomy, int competence, int social)
+    public void SetGameStats(int autonomy, int competence, int social)
     {
         gameStats.autonomy += autonomy;
         gameStats.competence += competence;
