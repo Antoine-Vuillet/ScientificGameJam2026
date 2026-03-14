@@ -8,50 +8,81 @@ public class CinemachineSwitcher : MonoBehaviour
     private bool baseCamera = true;
     private Animator animator;
     [SerializeField] private Canvas baseCanvas;
-    [SerializeField] private Canvas leftCanvas;
-    [SerializeField] private Canvas rightCanvas;
+    [SerializeField] private Canvas phoneCanvas;
+    [SerializeField] private Canvas laptopCanvas;
+    [SerializeField] private Canvas screen1Canvas;
+    [SerializeField] private Canvas screen2Canvas;
     
     void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    public void SwitchLeft()
+    public void SwitchPhone()
     {
         if (baseCamera)
         {
-            animator.Play("LeftCamera");
+            animator.Play("PhoneCamera");
             baseCanvas.enabled = false;
-            leftCanvas.enabled = true;
+            phoneCanvas.enabled = true;
         }
         else
         {
             animator.Play("BaseCamera");
             baseCanvas.enabled = true;
-            leftCanvas.enabled = false;
+            phoneCanvas.enabled = false;
         }
         baseCamera = !baseCamera;
     }
 
-    public void SwitchRight()
+    public void SwitchLaptop()
     {
         if (baseCamera)
         {
-            animator.Play("RightCamera");
+            animator.Play("LaptopCamera");
             baseCanvas.enabled = false;
-            rightCanvas.enabled = true;
+            laptopCanvas.enabled = true;
         }
         else
         {
             animator.Play("BaseCamera");
             baseCanvas.enabled = true;
-            rightCanvas.enabled = false;
+            laptopCanvas.enabled = false;
         }
         baseCamera = !baseCamera;
     }
-
-    void Update()
+    
+    public void SwitchScreen1()
     {
-        
+        if (baseCamera)
+        {
+            animator.Play("Screen1Camera");
+            baseCanvas.enabled = false;
+            screen1Canvas.enabled = true;
+        }
+        else
+        {
+            animator.Play("BaseCamera");
+            baseCanvas.enabled = true;
+            screen1Canvas.enabled = false;
+        }
+        baseCamera = !baseCamera;
+    }
+    
+    public void SwitchScreen2()
+    {
+        if (baseCamera)
+        {
+            animator.Play("Screen2Camera");
+            baseCanvas.enabled = false;
+            screen2Canvas.enabled = true;
+        }
+        else
+        {
+            animator.Play("BaseCamera");
+            baseCanvas.enabled = true;
+            screen2Canvas.enabled = false;
+        }
+        baseCamera = !baseCamera;
     }
 }
