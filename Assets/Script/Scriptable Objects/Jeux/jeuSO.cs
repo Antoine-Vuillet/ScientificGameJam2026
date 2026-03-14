@@ -21,6 +21,7 @@ public class feature
 public class jeuSO : ScriptableObject
 {
     public List<feature> features;
+    public int budget;
     [Header("Objectifs")]
     [Range(0, 100)]
     public int autonomy;
