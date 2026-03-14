@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Main Camera Blends
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineBlenderSettings
   m_CustomBlends:
-  - m_From: Virtual Camera
-    m_To: Virtual Camera (1)
+  - m_From: BaseCamera
+    m_To: PhoneCamera
     m_Blend:
       m_Style: 1
       m_Time: 2
@@ -24,8 +24,8 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: Virtual Camera
-    m_To: Virtual Camera (2)
+  - m_From: PhoneCamera
+    m_To: BaseCamera
     m_Blend:
       m_Style: 1
       m_Time: 2
@@ -35,8 +35,8 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: Virtual Camera (2)
-    m_To: Virtual Camera
+  - m_From: BaseCamera
+    m_To: LaptopCamera
     m_Blend:
       m_Style: 1
       m_Time: 2
@@ -46,8 +46,52 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: Virtual Camera (1)
-    m_To: Virtual Camera
+  - m_From: LaptopCamera
+    m_To: BaseCamera
+    m_Blend:
+      m_Style: 1
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: BaseCamera
+    m_To: Screen1Camera
+    m_Blend:
+      m_Style: 1
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Screen1Camera
+    m_To: BaseCamera
+    m_Blend:
+      m_Style: 1
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: BaseCamera
+    m_To: Screen2Camera
+    m_Blend:
+      m_Style: 1
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: Screen2Camera
+    m_To: BaseCamera
     m_Blend:
       m_Style: 1
       m_Time: 2
