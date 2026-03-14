@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34eea1142d1b0b4aa49cef451376dee, type: 3}
+  m_Name: jeu1Info1
+  m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
+  commentProfilePicture: {fileID: 21300000, guid: a165428991837c94989fbf27a384160c, type: 3}
+  commentUserName: Jean-Luc Bruelle
+  commentMessage: "Oui le multi \xE9tait bien"
+  commentColor: {r: 0.47843137, g: 0.70980394, b: 0.34117648, a: 0}
+  autonomy: 0
+  social: 60
+  competence: 0

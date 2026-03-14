@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892ca93e5c46b7c43bfe5f8d5ac5af1e, type: 3}
   m_Name: Jeu1
   m_EditorClassIdentifier: Assembly-CSharp::jeuSO
+  features:
+  - featureName: 
+    description: 
+    isDark: 0
+    autonomy: 0
+    social: 0
+    competence: 0
+  budget: 0
   autonomy: 0
   social: 0
   competence: 0
