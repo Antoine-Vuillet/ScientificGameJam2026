@@ -22,8 +22,8 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        music.clip = MusicMainMenu;
-        music.Play();
+        PlayMusic(MusicMainMenu);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void PlaySFX(AudioClip clip)
@@ -31,9 +31,10 @@ public class AudioManager : MonoBehaviour
         SFX.PlayOneShot(clip);
     }
 
-    public void ChangeMusic(AudioClip musicClip)
+    public void PlayMusic(AudioClip musicClip)
     {
         music.clip = musicClip;
+        music.loop = true;
         music.Play();
     }
 

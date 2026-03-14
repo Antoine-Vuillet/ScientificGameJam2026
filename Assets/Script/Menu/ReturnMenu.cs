@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-
-public class PlayButton : MonoBehaviour
+public class ReturnMenu : MonoBehaviour
 {
     private AudioManager _audioManager;
     private SceneLoader _sceneLoader;
@@ -14,11 +13,11 @@ public class PlayButton : MonoBehaviour
         _sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>();
     }
 
-    public void PlayGameOnClick()
+    public void ReturnMenuOnClick()
     {
         _audioManager.PlayClic();
         _audioManager.StopMusic();
-        _sceneLoader.SceneLoading("MainScene");
+        _sceneLoader.SceneLoading("MenuStartScene");
 
     }
 }
