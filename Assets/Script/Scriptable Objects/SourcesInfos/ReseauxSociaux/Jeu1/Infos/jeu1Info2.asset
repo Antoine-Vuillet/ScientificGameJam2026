@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b34eea1142d1b0b4aa49cef451376dee, type: 3}
-  m_Name: Profil1
+  m_Name: jeu1Info2
   m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
-  profilePicture: {fileID: 0}
-  name: Michel Polnaref
-  message: Blablabla allala lal alllalalal la  lal la a
-  color: {r: 0, g: 0, b: 0, a: 0}
-  cost: 0
-  autonomy: 0
+  commentProfilePicture: {fileID: 21300000, guid: 2cdbc106784d3144d998272eac890c05, type: 3}
+  commentUserName: Tatata tititi
+  commentMessage: Oui je lala lala
+  commentColor: {r: 0.42352942, g: 0.6392157, b: 0.8627451, a: 1}
+  autonomy: 50
   social: 0
   competence: 0

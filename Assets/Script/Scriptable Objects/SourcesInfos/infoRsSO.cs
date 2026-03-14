@@ -1,15 +1,14 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Info RS", menuName = "Sources informations/Info RS")]
+[CreateAssetMenu(fileName = "Info RS", menuName = "Sources informations/RS/Info RS")]
 public class infoRsSO : ScriptableObject
 {
-    public Sprite profilePicture;
-    public string infoName;
-    public string message;
-    public Color color;
-    public int cost;
-    public bool isDark;
+    public Sprite commentProfilePicture;
+    public string commentUserName;
+    public string commentMessage;
+    public Color commentColor;
 
+    [Header("Stats")]
     [Range(0, 100)]
     public int autonomy;
     [Range(0, 100)]
