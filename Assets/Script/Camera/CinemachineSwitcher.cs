@@ -24,7 +24,7 @@ public class CinemachineSwitcher : MonoBehaviour
         {
             animator.Play("PhoneCamera");
             baseCanvas.enabled = false;
-            phoneCanvas.enabled = true;
+            Invoke("LateOpenPhone", 1.9f);
         }
         else
         {
@@ -35,13 +35,18 @@ public class CinemachineSwitcher : MonoBehaviour
         baseCamera = !baseCamera;
     }
 
+    public void LateOpenPhone()
+    {
+        phoneCanvas.enabled = true;
+    }
+
     public void SwitchLaptop()
     {
         if (baseCamera)
         {
             animator.Play("LaptopCamera");
             baseCanvas.enabled = false;
-            laptopCanvas.enabled = true;
+            Invoke("LateOpenLaptop", 1.9f);
         }
         else
         {
@@ -51,6 +56,11 @@ public class CinemachineSwitcher : MonoBehaviour
         }
         baseCamera = !baseCamera;
     }
+
+    public void LateOpenLaptop()
+    {
+        laptopCanvas.enabled = true;
+    }
     
     public void SwitchScreen1()
     {
@@ -58,7 +68,7 @@ public class CinemachineSwitcher : MonoBehaviour
         {
             animator.Play("Screen1Camera");
             baseCanvas.enabled = false;
-            screen1Canvas.enabled = true;
+            Invoke("LateOpenScreen1", 1.9f);
         }
         else
         {
@@ -68,6 +78,11 @@ public class CinemachineSwitcher : MonoBehaviour
         }
         baseCamera = !baseCamera;
     }
+
+    public void LateOpenScreen1()
+    {
+        screen1Canvas.enabled = true;
+    }
     
     public void SwitchScreen2()
     {
@@ -75,7 +90,7 @@ public class CinemachineSwitcher : MonoBehaviour
         {
             animator.Play("Screen2Camera");
             baseCanvas.enabled = false;
-            screen2Canvas.enabled = true;
+            Invoke("LateOpenScreen2", 1.9f);
         }
         else
         {
@@ -84,5 +99,10 @@ public class CinemachineSwitcher : MonoBehaviour
             screen2Canvas.enabled = false;
         }
         baseCamera = !baseCamera;
+    }
+
+    public void LateOpenScreen2()
+    {
+        screen2Canvas.enabled = true;
     }
 }
