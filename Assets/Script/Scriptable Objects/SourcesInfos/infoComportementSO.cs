@@ -3,7 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Profil Comportement", menuName = "Sources informations/Profil Comportement")]
 public class infoComportementSO : ScriptableObject
 {
-    public string message;
+    public string infoName;
+    public string description;
     public Color color;
     public int cost;
     public bool isDark;

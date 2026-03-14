@@ -4,7 +4,7 @@ using UnityEngine;
 public class infoRsSO : ScriptableObject
 {
     public Sprite profilePicture;
-    public string name;
+    public string infoName;
     public string message;
     public Color color;
     public int cost;

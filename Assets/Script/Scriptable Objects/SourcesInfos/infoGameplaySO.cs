@@ -3,7 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Info Gameplay", menuName = "Sources informations/Info Gameplay")]
 public class infoGameplaySO : ScriptableObject
 {
-    public string message;
+    public string infoName;
+    public string description;
     public Color color;
     public int cost;
     public bool isDark;
