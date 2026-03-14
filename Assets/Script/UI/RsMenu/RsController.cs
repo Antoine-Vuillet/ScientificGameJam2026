@@ -18,6 +18,8 @@ public class treatData
     public string treatName;
     public int treatCost;
     public bool isDark;
+    [Header("Stats treated")]
+    public List<bool> treatedStats; // 0: autonomy, 1: social, 2: competence
 }
 public class RsController : MonoBehaviour
 {
@@ -75,14 +77,26 @@ public class RsController : MonoBehaviour
 
         for (int i = 0; i < treat.Count; i++)
         {
-            TextMeshProUGUI treatName = treat[i].transform.Find("TreatName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI treatName = treat[i].transform.Find("TextAndPastilles/TreatName").GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI treatCost = treat[i].transform.Find("Button/TreatCost").GetComponent<TextMeshProUGUI>();
+
+            Image autonomyIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Autonomy").GetComponent<Image>();
+            Image socialIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Social").GetComponent<Image>();
+            Image competenceIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Competence").GetComponent<Image>();
 
             if (i < rsGames[gameIndex].treatButtonsInfo.Count)
             {
                 treatData treatData = rsGames[gameIndex].treatButtonsInfo[i];
                 treatName.text = treatData.treatName;
-                treatCost.text = treatData.treatCost.ToString();
+                treatCost.text = treatData.treatCost.ToString() + "€";
+
+                var pastilles = treatData.treatedStats;
+                Image[] icons = { autonomyIcon, socialIcon, competenceIcon };
+
+                for (int j = 0; j < pastilles.Count && j < icons.Length; j++)
+                {
+                    icons[j].gameObject.SetActive(pastilles[j]);
+                }
             }
             else
             {
@@ -94,11 +108,7 @@ public class RsController : MonoBehaviour
 
 
 
-    public void treatNormalData()
-    {
-
-    }
-    public void treatDarkData()
+    public void treatDataBtn()
     {
 
     }
