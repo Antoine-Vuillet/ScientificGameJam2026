@@ -3,16 +3,27 @@ using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using TMPro;
 
 [Serializable]
 public class rsGame
 {
     public List<infoRsSO> infos;
+    public List<treatData> treatButtonsInfo;
+}
+
+[Serializable]
+public class treatData
+{
+    public string treatName;
+    public int treatCost;
+    public bool isDark;
 }
 public class RsController : MonoBehaviour
 {
     [SerializeField] private List<rsGame> rsGames;
     [SerializeField] private List<GameObject> infos;
+    [SerializeField] private List<GameObject> treat;
 
     private int currentGameIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,6 +38,7 @@ public class RsController : MonoBehaviour
 
     }
 
+    [Button("Next Game")]
     public void NextGame()
     {
         currentGameIndex++;
@@ -36,26 +48,61 @@ public class RsController : MonoBehaviour
         }
     }
 
-    private void updateInfos(int gameIndex) {
+    private void updateInfos(int gameIndex)
+    {
         for (int i = 0; i < infos.Count; i++)
         {
-            Image profilePicture = infos[i].GetComponentInChildren<Image>();
-            TextMeshProUGUI title = infos[i].GetComponentInChildren<TextMeshProUGUI>();
-            TextMeshProUGUI message = infos[i].GetComponentInChildren<TextMeshProUGUI>();
+            Image profilePicture = infos[i].transform.Find("ProfilePictureImg").GetComponent<Image>();
+            TextMeshProUGUI userName = infos[i].transform.Find("UserName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI message = infos[i].transform.Find("Commentary").GetComponent<TextMeshProUGUI>();
 
             if (i < rsGames[gameIndex].infos.Count)
             {
                 infoRsSO infoData = rsGames[gameIndex].infos[i];
-                profilePicture.sprite = infoData.profilePicture;
-                title.text = infoData.title;
-                message.text = infoData.message;
+                profilePicture.sprite = infoData.commentProfilePicture;
+                userName.text = infoData.commentUserName;
+                message.text = infoData.commentMessage;
+                infos[i].GetComponent<Image>().color = infoData.commentColor;
             }
             else
             {
                 profilePicture.sprite = null;
-                title.text = "";
+                userName.text = "";
                 message.text = "";
+                infos[i].GetComponent<Image>().color = Color.clear;
+            }
+        }
+
+        for (int i = 0; i < treat.Count; i++)
+        {
+            TextMeshProUGUI treatName = treat[i].transform.Find("TreatName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI treatCost = treat[i].transform.Find("Button/TreatCost").GetComponent<TextMeshProUGUI>();
+
+            if (i < rsGames[gameIndex].treatButtonsInfo.Count)
+            {
+                treatData treatData = rsGames[gameIndex].treatButtonsInfo[i];
+                treatName.text = treatData.treatName;
+                treatCost.text = treatData.treatCost.ToString();
+            }
+            else
+            {
+                treatName.text = "";
+                treatCost.text = "";
             }
         }
     }
+
+
+
+    public void treatNormalData()
+    {
+
+    }
+    public void treatDarkData()
+    {
+
+    }
+
+    // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>
+    // <a href="https://www.flaticon.com/fr/icones-gratuites/maman" title="maman icônes">Maman icônes créées par Freepik - Flaticon</a>
 }
