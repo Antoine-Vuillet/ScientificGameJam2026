@@ -12,6 +12,10 @@ public class CinemachineSwitcher : MonoBehaviour
     [SerializeField] private Canvas laptopCanvas;
     [SerializeField] private Canvas screen1Canvas;
     [SerializeField] private Canvas screen2Canvas;
+
+    [SerializeField] private GameObject GraphAutonomie;
+    [SerializeField] private GameObject GraphCompetence;
+    [SerializeField] private GameObject GraphLienSocial;
     
     void Awake()
     {
@@ -97,6 +101,9 @@ public class CinemachineSwitcher : MonoBehaviour
             animator.Play("BaseCamera");
             baseCanvas.enabled = true;
             screen2Canvas.enabled = false;
+            GraphAutonomie.SetActive(false);
+            GraphCompetence.SetActive(false);
+            GraphLienSocial.SetActive(false);
         }
         baseCamera = !baseCamera;
     }
@@ -104,5 +111,8 @@ public class CinemachineSwitcher : MonoBehaviour
     public void LateOpenScreen2()
     {
         screen2Canvas.enabled = true;
+        GraphAutonomie.SetActive(true);
+        GraphCompetence.SetActive(true);
+        GraphLienSocial.SetActive(true);
     }
 }
