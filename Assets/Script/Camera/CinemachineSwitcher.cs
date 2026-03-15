@@ -28,7 +28,7 @@ public class CinemachineSwitcher : MonoBehaviour
         {
             animator.Play("PhoneCamera");
             baseCanvas.enabled = false;
-            Invoke("LateOpenPhone", 1.9f);
+            Invoke("LateOpenPhone", 2f);
         }
         else
         {
