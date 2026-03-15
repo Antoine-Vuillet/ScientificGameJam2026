@@ -17,6 +17,9 @@ public class RsController : MonoBehaviour
     [SerializeField] private List<rsGame> GameList;
     [SerializeField] private List<GameObject> infos;
     [SerializeField] private List<GameObject> treat;
+    private bool autonomyTreated = false;
+    private bool socialTreated = false;
+    private bool competenceTreated = false;
 
     private int currentGameIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -81,10 +84,16 @@ public class RsController : MonoBehaviour
                 treatName.text = treatData.treatName;
                 treatCost.text = treatData.treatCost.ToString() + "€";
 
-                autonomyIcon.gameObject.SetActive(treatData.autonomy > 0);
-                socialIcon.gameObject.SetActive(treatData.social > 0);
-                competenceIcon.gameObject.SetActive(treatData.competence > 0);
+                var pastilles = treatData.treatedStats;
+                Image[] icons = { autonomyIcon, socialIcon, competenceIcon };
 
+                for (int j = 0; j < pastilles.Count && j < icons.Length; j++)
+                {
+                    icons[j].gameObject.SetActive(pastilles[j]);
+                }
+                autonomyTreated = pastilles[0];
+                socialTreated = pastilles[1];
+                competenceTreated = pastilles[2];
             }
             else
             {
@@ -102,7 +111,7 @@ public class RsController : MonoBehaviour
 
     public void treatDataBtn(TextMeshProUGUI p_treatCost)
     {
-
+        
     }
 
     // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>

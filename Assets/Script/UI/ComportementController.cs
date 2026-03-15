@@ -81,9 +81,13 @@ public class ComportementController : MonoBehaviour
                 treatName.text = treatData.treatName;
                 treatCost.text = treatData.treatCost.ToString() + "€";
 
-                autonomyIcon.gameObject.SetActive(treatData.autonomy > 0);
-                socialIcon.gameObject.SetActive(treatData.social > 0);
-                competenceIcon.gameObject.SetActive(treatData.competence > 0);
+                var pastilles = treatData.treatedStats;
+                Image[] icons = { autonomyIcon, socialIcon, competenceIcon };
+
+                for (int j = 0; j < pastilles.Count && j < icons.Length; j++)
+                {
+                    icons[j].gameObject.SetActive(pastilles[j]);
+                }
             }
             else
             {
@@ -100,7 +104,7 @@ public class ComportementController : MonoBehaviour
 
     public void treatDataBtn(TextMeshProUGUI p_treatCost)
     {
-        
+
     }
 
     // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>
