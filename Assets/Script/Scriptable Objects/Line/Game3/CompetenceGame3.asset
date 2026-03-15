@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae49c3ed628aba644bf39a8d33a833ab, type: 3}
   m_Name: CompetenceGame3
   m_EditorClassIdentifier: 
-  chartName: CompetenceGame1
+  chartName: "Taux de compl\xE9tion du jeu"
   chartId: 3dc3eb17350d4afe85483ec68671d152
   coordinateSystem: 0
   cartesian:
