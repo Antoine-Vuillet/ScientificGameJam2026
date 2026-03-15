@@ -13,7 +13,6 @@ namespace TS.DoubleSlider
         [Header("References")]
         [SerializeField] private SingleSlider _sliderMin;
         [SerializeField] private SingleSlider _sliderMax;
-        [SerializeField] private RectTransform _fillArea;
 
         [Header("Configuration")]
         [SerializeField] private bool _setupOnStart;
@@ -70,17 +69,6 @@ namespace TS.DoubleSlider
 #endif
                 return;
             }
-
-            if (_fillArea == null)
-            {
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-
-                Debug.LogError("Missing fill area");
-#endif
-                return;
-            }
-
-            _fillRect = _fillArea.transform.GetChild(0).transform as RectTransform;
         }
         private void Start()
         {
@@ -104,10 +92,6 @@ namespace TS.DoubleSlider
 
         private void MinValueChanged(float value)
         {
-            float offset = ((MinValue - _minValue) / (_maxValue - _minValue)) * _fillArea.rect.width;
-
-            _fillRect.offsetMin = new Vector2(offset, _fillRect.offsetMin.y);
-
             if ((MaxValue - value) < _minDistance)
             {
                 _sliderMin.Value = MaxValue - _minDistance;
@@ -118,15 +102,10 @@ namespace TS.DoubleSlider
         }
         private void MaxValueChanged(float value)
         {
-            float offset = (1 - ((MaxValue - _minValue) / (_maxValue - _minValue))) * _fillArea.rect.width;
-
-            _fillRect.offsetMax = new Vector2(-offset, _fillRect.offsetMax.y);
-
             if ((value - MinValue) < _minDistance)
             {
                 _sliderMax.Value = MinValue + _minDistance;
             }
-
             OnValueChanged.Invoke(MinValue, MaxValue);
             _sliderMax.transform.SetAsLastSibling();
         }

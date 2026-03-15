@@ -6,8 +6,8 @@ public class ScoreManager : MonoBehaviour
 {
     private int financialScore;
     private int moralScore;
-    [SerializeField] private List<jeuSO> dailyGames;
-    private int currentDay;
+    [SerializeField] public List<jeuSO> dailyGames;
+    public int currentDay;
 
     private void Start()
     {

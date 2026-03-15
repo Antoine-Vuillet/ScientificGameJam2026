@@ -53,7 +53,6 @@ public class FeatureChoiceScript : MonoBehaviour
             autonomy += toggle.GetComponent<FeatureScript>().feature.autonomy;
             social += toggle.GetComponent<FeatureScript>().feature.social;
         }
-        print(social);
         autonomySlider.value = autonomy;
         competenceSlider.value = competence;
         socialSlider.value = social;
