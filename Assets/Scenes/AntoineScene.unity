@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 3e6748fe48913a140a21159c3045772a, type: 2}
 --- !u!114 &78000735
 MonoBehaviour:
@@ -1714,6 +1715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 686ac199c22591d4c9d09cd9417ac103, type: 2}
 --- !u!114 &266913838
 MonoBehaviour:
@@ -2861,6 +2863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 1050a7c06ae33424294b9e60f102e354, type: 2}
 --- !u!114 &369438246
 MonoBehaviour:
@@ -3105,6 +3108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 70598d4e66065dd4bb65668de7986569, type: 2}
 --- !u!114 &381617792
 MonoBehaviour:
@@ -4647,6 +4651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 1
   feature: {fileID: 11400000, guid: 8198f623d5a68ba468c336498057722e, type: 2}
 --- !u!114 &588892372
 MonoBehaviour:
@@ -4837,6 +4842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: c93563e770ba85948b557552c6de0815, type: 2}
 --- !u!114 &626707424
 MonoBehaviour:
@@ -5744,6 +5750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 9178fb701ddb9b746aeef3dae8041c6e, type: 2}
 --- !u!114 &715458316
 MonoBehaviour:
@@ -6050,6 +6057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 1
   feature: {fileID: 11400000, guid: 1f10bbdb1663c8e4399028c1478749e2, type: 2}
 --- !u!114 &734166092
 MonoBehaviour:
@@ -6819,6 +6827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: c0ff09829f126a94abb768deca7d6db1, type: 2}
 --- !u!114 &823358935
 MonoBehaviour:
@@ -7555,6 +7564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 24cbf125f54a5794ca25b81926b46d33, type: 2}
 --- !u!114 &893715193
 MonoBehaviour:
@@ -8428,6 +8438,9 @@ MonoBehaviour:
   treat:
   - {fileID: 1437372242}
   - {fileID: 1498106716}
+  scoreManager: {fileID: 0}
+  knowledgeManager: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &985980911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9558,6 +9571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 3876ead26cac2ac41850e34f2b0b9d77, type: 2}
 --- !u!114 &1233955784
 MonoBehaviour:
@@ -11100,6 +11114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 51d65ade7f75c7c45a8eb80db6cb546a, type: 2}
 --- !u!114 &1395850246
 MonoBehaviour:
@@ -13463,6 +13478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 1
   feature: {fileID: 11400000, guid: c4a4b477c33e12f40a288c874b830da3, type: 2}
 --- !u!114 &1642754179
 MonoBehaviour:
@@ -13575,6 +13591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 07247a4d49cb5f64ba1a83ba537e658a, type: 2}
 --- !u!114 &1643025576
 MonoBehaviour:
@@ -13968,6 +13985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 2c5bddc284e98544d93ca78ec007369e, type: 2}
 --- !u!114 &1661527366
 MonoBehaviour:
@@ -14439,6 +14457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: cc4974510fbe38945af83651f17c78d5, type: 2}
 --- !u!114 &1721371214
 MonoBehaviour:
@@ -15285,6 +15304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 3864a482884e0054486686f3e2b74096, type: 2}
 --- !u!114 &1842618990
 MonoBehaviour:
@@ -16804,6 +16824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeatureScript
   generalScript: {fileID: 1111333991}
+  isGenre: 0
   feature: {fileID: 11400000, guid: 85af038e5ba74da41954476329253651, type: 2}
 --- !u!114 &2079389119
 MonoBehaviour:

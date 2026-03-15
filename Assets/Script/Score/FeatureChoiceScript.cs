@@ -12,18 +12,22 @@ public class FeatureChoiceScript : MonoBehaviour
     [SerializeField]private Slider autonomySlider;
     [SerializeField]private Slider socialSlider;
     private List<Toggle> toggles = new List<Toggle>();
+    private bool genreChosen;
     
-    public void OnToggleValueChanged(bool value, Toggle toggle)
+    public void OnToggleValueChanged(bool value, Toggle toggle, bool isGenre)
     {
         if (value)
         {
-            print(ourGame.usedMoney + " + "+ourGame.maxMoney);
-            if (ourGame.usedMoney >= ourGame.maxMoney)
+            if ((ourGame.usedMoney+toggle.GetComponent<FeatureScript>().feature.cost > ourGame.maxMoney) || (genreChosen && isGenre))
             {
                 toggle.isOn = false;
             }
             else
             {
+                if (isGenre)
+                {
+                    genreChosen = true;
+                }
                 ourGame.usedMoney+=toggle.GetComponent<FeatureScript>().feature.cost;
                 toggles.Add(toggle);
             }
@@ -32,6 +36,10 @@ public class FeatureChoiceScript : MonoBehaviour
         {
             if (toggles.Remove(toggle))
             {
+                if (isGenre)
+                {
+                    genreChosen = false;
+                }
                 ourGame.usedMoney-=toggle.GetComponent<FeatureScript>().feature.cost;
             }
         }
