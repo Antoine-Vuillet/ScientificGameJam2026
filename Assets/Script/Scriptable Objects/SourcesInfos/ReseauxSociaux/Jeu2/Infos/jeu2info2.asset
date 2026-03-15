@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: jeu2info2
   m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
   commentProfilePicture: {fileID: 21300000, guid: 2cdbc106784d3144d998272eac890c05, type: 3}
-  commentUserName: Tatata tititi
-  commentMessage: Oui le sociaaal
+  commentUserName: Nicole
+  commentMessage: "L'\xEAtre humain est un animal social : il a besoin de voir du
+    monde pour se rappeler pourquoi il pr\xE9f\xE8re rester seul."
   commentColor: {r: 0.47450984, g: 0.70980394, b: 0.34117648, a: 1}
   autonomy: 0
   social: 89

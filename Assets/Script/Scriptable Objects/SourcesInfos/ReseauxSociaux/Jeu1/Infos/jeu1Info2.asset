@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: jeu1Info2
   m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
   commentProfilePicture: {fileID: 21300000, guid: 2cdbc106784d3144d998272eac890c05, type: 3}
-  commentUserName: Tatata tititi
-  commentMessage: Oui je lala lala
+  commentUserName: Lucie
+  commentMessage: "Une ia m\u2019a engueul\xE9 car j\u2019ai refus\xE9 de suivre
+    les fl\xE8ches vertes fluo avec marqu\xE9 'Qu\xEAte principal'."
   commentColor: {r: 0.42352942, g: 0.6392157, b: 0.8627451, a: 1}
   autonomy: 50
   social: 0
