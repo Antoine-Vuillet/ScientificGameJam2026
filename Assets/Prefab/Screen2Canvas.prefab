@@ -1421,7 +1421,7 @@ PrefabInstance:
     - target: {fileID: 9069218174894193351, guid: 34c5439297bf10049a480629496a0f5e, type: 3}
       propertyPath: _profile
       value: 
-      objectReference: {fileID: 11400000, guid: 0490c600f13a7b84097983bf62c321ba, type: 2}
+      objectReference: {fileID: 11400000, guid: 9cf419bc69c8f674f859a5f454343e8d, type: 2}
     - target: {fileID: 9069218174894193351, guid: 34c5439297bf10049a480629496a0f5e, type: 3}
       propertyPath: _logResolutionChanges
       value: 0
@@ -1562,7 +1562,7 @@ PrefabInstance:
     - target: {fileID: 9069218174894193351, guid: 34c5439297bf10049a480629496a0f5e, type: 3}
       propertyPath: _profile
       value: 
-      objectReference: {fileID: 11400000, guid: 0490c600f13a7b84097983bf62c321ba, type: 2}
+      objectReference: {fileID: 11400000, guid: bd5ff56ef5f059340a9837578dcf1025, type: 2}
     - target: {fileID: 9069218174894193351, guid: 34c5439297bf10049a480629496a0f5e, type: 3}
       propertyPath: _logResolutionChanges
       value: 0
@@ -1703,7 +1703,7 @@ PrefabInstance:
     - target: {fileID: 9069218174894193351, guid: 34c5439297bf10049a480629496a0f5e, type: 3}
       propertyPath: _profile
       value: 
-      objectReference: {fileID: 11400000, guid: 0490c600f13a7b84097983bf62c321ba, type: 2}
+      objectReference: {fileID: 11400000, guid: d8534ee70a3902f4e923d0f61689fab9, type: 2}
     - target: {fileID: 9069218174894193351, guid: 34c5439297bf10049a480629496a0f5e, type: 3}
       propertyPath: _logResolutionChanges
       value: 0
