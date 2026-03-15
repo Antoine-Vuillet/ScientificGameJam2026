@@ -305,11 +305,11 @@ PrefabInstance:
     - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
       propertyPath: MusicInGame
       value: 
-      objectReference: {fileID: 8300000, guid: 48a722f3692be1546a00857368ff97ec, type: 3}
+      objectReference: {fileID: 8300000, guid: e188fb788dd886f40990b7d8ae613ef7, type: 3}
     - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
       propertyPath: MusicEndGame
       value: 
-      objectReference: {fileID: 8300000, guid: af5a4bfad807f724e930c9fae0f90416, type: 3}
+      objectReference: {fileID: 8300000, guid: 662f251a1f9b44948ad5e76642ed93d1, type: 3}
     - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
       propertyPath: MusicMainMenu
       value: 
