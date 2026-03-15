@@ -17,9 +17,9 @@ public class RsController : MonoBehaviour
     [SerializeField] private List<rsGame> GameList;
     [SerializeField] private List<GameObject> infos;
     [SerializeField] private List<GameObject> treat;
-    private bool autonomyTreated = false;
-    private bool socialTreated = false;
-    private bool competenceTreated = false;
+    [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private KnowledgeManager knowledgeManager;
+    [SerializeField] private GameScript gameManager;
 
     private int currentGameIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -91,9 +91,6 @@ public class RsController : MonoBehaviour
                 {
                     icons[j].gameObject.SetActive(pastilles[j]);
                 }
-                autonomyTreated = pastilles[0];
-                socialTreated = pastilles[1];
-                competenceTreated = pastilles[2];
             }
             else
             {
@@ -102,16 +99,36 @@ public class RsController : MonoBehaviour
                 autonomyIcon.gameObject.SetActive(false);
                 socialIcon.gameObject.SetActive(false);
                 competenceIcon.gameObject.SetActive(false);
-
             }
         }
     }
 
-
-
-    public void treatDataBtn(TextMeshProUGUI p_treatCost)
+    public void treatDataBtn1()
     {
-        
+        treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[0];
+        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
+        knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+
+        gameManager.usedMoney -= t_treatData.treatCost;
+
+        if (t_treatData.isDark)
+        {
+            scoreManager.AddMoralScore(1);
+        }
+    }
+
+    public void treatDataBtn2()
+    {
+        treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[1];
+        Debug.Log("treatDataBtn2 : " + t_treatData.treatName);
+        knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+
+        gameManager.usedMoney -= t_treatData.treatCost;
+
+        if (t_treatData.isDark)
+        {
+            scoreManager.AddMoralScore(1);
+        }
     }
 
     // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>
