@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     private int moralScore;
     [SerializeField] public List<jeuSO> dailyGames;
     public int currentDay;
+    [SerializeField] private RsController reseauController;
 
     private void Start()
     {
@@ -67,5 +68,9 @@ public class ScoreManager : MonoBehaviour
         value += CalcValue(currentGame.social, ourGame.GetGameStats().social);
         AddFinancialScore(value);
         AddMoralScore(ourGame.GetPatternCount());
+        ourGame.Reset();
+        GetComponent<KnowledgeManager>().ResetKnowledge();
+        reseauController.NextGame();
+        currentDay++;
     }
 }

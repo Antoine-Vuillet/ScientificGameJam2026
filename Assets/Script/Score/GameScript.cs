@@ -18,6 +18,11 @@ public class GameScript : MonoBehaviour
 
     private void Start()
     {
+        Reset();
+    }
+
+    public void Reset()
+    {
         gameStats.autonomy = 0;
         gameStats.competence = 0;
         gameStats.social = 0;
