@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip chaise;
     public AudioClip notifPhone;
 
+    public AudioClip achat;
+
     [Header("-------AudioClipMusic-------")]
     public AudioClip MusicMainMenu;
     public AudioClip MusicInGame;
@@ -35,6 +37,7 @@ public class AudioManager : MonoBehaviour
     {
         music.clip = musicClip;
         music.loop = true;
+        music.mute = false;
         music.Play();
     }
 

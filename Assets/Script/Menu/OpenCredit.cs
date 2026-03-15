@@ -5,6 +5,7 @@ using System.Collections;
 public class OpenCredit : MonoBehaviour
 {
     [SerializeField] private GameObject creditCanvas;
+    [SerializeField] private GameObject MenuCanvas;
 
     private AudioManager _audioManager;
 
@@ -15,6 +16,7 @@ public class OpenCredit : MonoBehaviour
 
     public void OpenCreditOnClick()
     {
+        MenuCanvas.SetActive(false);
         _audioManager.PlayClic();
         creditCanvas.SetActive(true);
     }

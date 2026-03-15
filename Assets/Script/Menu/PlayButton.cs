@@ -19,6 +19,7 @@ public class PlayButton : MonoBehaviour
         _audioManager.PlayClic();
         _audioManager.StopMusic();
         _sceneLoader.SceneLoading("MainScene");
+        _audioManager.PlayMusic(_audioManager.MusicInGame);
 
     }
 }
