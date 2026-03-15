@@ -298,6 +298,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: achat
+      value: 
+      objectReference: {fileID: 8300000, guid: fd6ab76a48a46e14da48b206c738faf1, type: 3}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: MusicInGame
+      value: 
+      objectReference: {fileID: 8300000, guid: 48a722f3692be1546a00857368ff97ec, type: 3}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: MusicEndGame
+      value: 
+      objectReference: {fileID: 8300000, guid: af5a4bfad807f724e930c9fae0f90416, type: 3}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: MusicMainMenu
+      value: 
+      objectReference: {fileID: 8300000, guid: af5a4bfad807f724e930c9fae0f90416, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
