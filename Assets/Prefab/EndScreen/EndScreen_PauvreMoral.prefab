@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &726993072463219197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_text
+      value: "Dans les forums de niche, votre nom est murmur\xE9 avec respect. Votre
+        jeu ne sera pas un \"service\" qui dure dix ans \xE0 coup de micro-transactions,
+        mais restera dans la m\xE9moire de ceux qui y ont jou\xE9 comme une exp\xE9rience
+        pure, honn\xEAte et humaine.\r\n\r\nComme beaucoup de jeux ind\xE9pendants,
+        le march\xE9 vous a ignor\xE9 mais vos joueurs vous remercient. Vous partez
+        sans un sou, mais avec votre dignit\xE9 intacte.\r\n\r\nVous \xEAtes un peu
+        comme le studio Umanimation qui a cr\xE9\xE9 le jeu vid\xE9o Dordogne . Malgr\xE9
+        un P\xE9gase (l'\xE9quivalent des c\xE9sars du jeux vid\xE9o) en 2024, le
+        march\xE9 et la logique \xE9conomique auront eu raison de vous . Le jeux-vid\xE9o
+        peut \xEAtre de l\u2019art mais il produit aussi un bien et ne peut s\u2019affranchir
+        de la logique \xE9conomique."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036913533238235650, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_text
+      value: Fin 3/4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428201122840677452, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_text
+      value: "L\u2019ARTISAN OUBLI\xC9 :"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818770706269346562, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_Name
+      value: EndScreen_PauvreMoral
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69207e39e0b0521448828591e04df410, type: 3}
