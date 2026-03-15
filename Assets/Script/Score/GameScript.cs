@@ -14,6 +14,7 @@ public class GameScript : MonoBehaviour
     private int patternCount = 0;
     public int maxMoney = 10;
     public int usedMoney;
+    public ScoreManager manager;
 
 
     private void Start()
@@ -23,6 +24,7 @@ public class GameScript : MonoBehaviour
 
     public void Reset()
     {
+        maxMoney = manager.dailyGames[manager.currentDay].budget;
         gameStats.autonomy = 0;
         gameStats.competence = 0;
         gameStats.social = 0;

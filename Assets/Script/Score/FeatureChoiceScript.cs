@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,7 +14,17 @@ public class FeatureChoiceScript : MonoBehaviour
     [SerializeField]private Slider socialSlider;
     private List<Toggle> toggles = new List<Toggle>();
     private bool genreChosen;
-    
+
+
+    public void Reset()
+    {
+        print("Hoy");
+        competenceSlider.value = 0;
+        autonomySlider.value = 0;
+        socialSlider.value = 0;
+    }
+
+
     public void OnToggleValueChanged(bool value, Toggle toggle, bool isGenre)
     {
         if (value)

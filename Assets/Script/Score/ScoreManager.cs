@@ -9,6 +9,14 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] public List<jeuSO> dailyGames;
     public int currentDay;
     [SerializeField] private RsController reseauController;
+    [SerializeField] private gameplayController _gameplayController;
+    [SerializeField] private ComportementController _comportementController;
+    [SerializeField] private FeatureChoiceScript _featureChoiceScript;
+
+    [SerializeField] private Canvas EndingPA;
+    [SerializeField] private Canvas EndingPM;
+    [SerializeField] private Canvas EndingRA;
+    [SerializeField] private Canvas EndingRM;
 
     private void Start()
     {
@@ -62,15 +70,48 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishDay(GameScript ourGame)
     {
-        jeuSO currentGame = dailyGames[currentDay];
-        int value = CalcValue(currentGame.autonomy, ourGame.GetGameStats().autonomy);
-        value += CalcValue(currentGame.competence, ourGame.GetGameStats().competence);
-        value += CalcValue(currentGame.social, ourGame.GetGameStats().social);
-        AddFinancialScore(value);
-        AddMoralScore(ourGame.GetPatternCount());
-        ourGame.Reset();
-        GetComponent<KnowledgeManager>().ResetKnowledge();
-        reseauController.NextGame();
-        currentDay++;
+        if (currentDay < 2)
+        {
+            jeuSO currentGame = dailyGames[currentDay];
+            int value = CalcValue(currentGame.autonomy, ourGame.GetGameStats().autonomy);
+            value += CalcValue(currentGame.competence, ourGame.GetGameStats().competence);
+            value += CalcValue(currentGame.social, ourGame.GetGameStats().social);
+            AddFinancialScore(value);
+            AddMoralScore(ourGame.GetPatternCount());
+            ourGame.Reset();
+            GetComponent<KnowledgeManager>().ResetKnowledge();
+            reseauController.NextGame();
+            _gameplayController.NextGame();
+            _comportementController.NextGame();
+            _featureChoiceScript.Reset();
+            currentDay++;
+        }
+        else
+        {
+            if (moralScore>=3)
+            {
+                if (financialScore >=8)
+                {
+                    EndingRA.enabled = true;
+                }
+
+                if (financialScore < 8)
+                {
+                    EndingPA.enabled = true;
+                }
+            }
+            else
+            {
+                if (financialScore >=8)
+                {
+                    EndingRM.enabled = true;
+                }
+
+                if (financialScore < 8)
+                {
+                    EndingPM.enabled = true;
+                }
+            }
+        }
     }
 }

@@ -41,6 +41,7 @@ public class KnowledgeManager : MonoBehaviour
 
     public void setKnowledge(bool auto, bool comp, bool social)
     {
+        print("yoyoyo");
         int upperChange;
         int lowerchange;
         if (auto)
