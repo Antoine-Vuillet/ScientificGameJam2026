@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c123f755a9d89014b99961f622590fa9, type: 3}
   m_Name: jeu2treat1Comportement
   m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
-  treatName: "Traitement \xE9thique et bon"
-  treatCost: 30
+  treatName: "Comparaison au data set des jeux pr\xE9c\xE9dents"
+  treatCost: 2
   isDark: 0
-  treatedStats: 010000
+  treatedStats: 010001

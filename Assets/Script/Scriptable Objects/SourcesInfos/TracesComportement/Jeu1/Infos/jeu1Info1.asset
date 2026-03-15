@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4dcf22bd8d185449b77955ff042cd7, type: 3}
   m_Name: jeu1Info1
   m_EditorClassIdentifier: Assembly-CSharp::comportementProfilSO
-  infoName: Nombre de jeux lalalal lalalal
-  infoStat: 1568
-  infoPercentage: 10
-  infoColor: {r: 0.47843137, g: 0.70980394, b: 0.34117648, a: 1}
+  infoName: "Taux de d\xE9viation de la qu\xEAte principale"
+  infoStat: 28
+  infoPercentage: -64%
+  infoColor: {r: 0.34901962, g: 0.53333336, b: 0.72156864, a: 1}
