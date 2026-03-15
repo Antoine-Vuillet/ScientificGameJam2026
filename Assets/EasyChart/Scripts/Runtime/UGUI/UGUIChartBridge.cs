@@ -40,7 +40,7 @@ namespace EasyChart.UGUI
     {
         [Header("Chart Configuration")]
         [Tooltip("The ChartProfile to display")]
-        [SerializeField] private ChartProfile _profile;
+        public ChartProfile _profile;
 
         [Tooltip("PanelSettings asset for UI Toolkit rendering. REQUIRED for proper font rendering.")]
         [SerializeField] private PanelSettings _panelSettingsAsset;

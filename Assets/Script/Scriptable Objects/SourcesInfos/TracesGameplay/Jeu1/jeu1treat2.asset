@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c123f755a9d89014b99961f622590fa9, type: 3}
-  m_Name: jeu1treat2Comportement
+  m_Name: jeu1treat2
   m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
-  treatName: "Comparaison au data set des jeux pr\xE9c\xE9dents"
-  treatCost: 1
-  isDark: 0
-  treatedStats: 000001
+  treatName: gfrthbythty
+  treatCost: 8989
+  isDark: 1
+  treatedStats: 000101
