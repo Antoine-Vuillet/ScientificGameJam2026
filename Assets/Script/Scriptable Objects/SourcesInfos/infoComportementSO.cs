@@ -5,6 +5,6 @@ public class infoComportementSO : ScriptableObject
 {
     public string infoName;
     public string infoStat;
-    public string infoPercentage;
+    public int infoPercentage;
     public Color infoColor;
 }
