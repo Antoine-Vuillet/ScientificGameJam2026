@@ -74,6 +74,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlayChaise()
     {
+        Invoke("PlayChaiseLate",0.5f);
+           
+    }
+
+    public void PlayChaiseLate()
+    {
         var id = Random.Range(1,4);
         switch (id)
         {
@@ -87,7 +93,6 @@ public class AudioManager : MonoBehaviour
                 PlaySFX(chaise3);
                 break;
         }
-           
     }
     
 }
