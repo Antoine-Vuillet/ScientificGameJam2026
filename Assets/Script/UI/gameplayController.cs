@@ -23,6 +23,8 @@ public class gameplayController : MonoBehaviour
     [SerializeField] private KnowledgeManager knowledgeManager;
     [SerializeField] private GameScript gameManager;
     private int currentGameIndex = 0;
+    private bool isBtn1Clicked = false;
+    private bool isBtn2Clicked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,11 +52,11 @@ public class gameplayController : MonoBehaviour
     private void updateInfos(int p_gameIndex)
     {
         for (int i = 0; i < infos.Count; i++)
-        {            
+        {
             if (i < GameList[p_gameIndex].infos.Count)
             {
                 ChartProfile infoData = GameList[p_gameIndex].infos[i];
-                
+
                 UGUIChartBridge graphComponent = infos[i].GetComponent<UGUIChartBridge>();
 
                 graphComponent._profile = infoData;
@@ -102,6 +104,12 @@ public class gameplayController : MonoBehaviour
             treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[i];
             Button treatBtn = treat[i].transform.Find("Button").GetComponent<Button>();
 
+            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
+            {
+                treatBtn.interactable = false;
+                return;
+            }
+
             if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
             {
                 treatBtn.interactable = true;
@@ -110,7 +118,6 @@ public class gameplayController : MonoBehaviour
             {
                 treatBtn.interactable = false;
             }
-
         }
     }
 
@@ -129,6 +136,7 @@ public class gameplayController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
+            isBtn1Clicked = true;
         }
         updateBtns();
     }
@@ -148,6 +156,7 @@ public class gameplayController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
+            isBtn2Clicked = true;
         }
         updateBtns();
     }

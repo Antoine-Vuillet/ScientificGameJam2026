@@ -21,6 +21,8 @@ public class ComportementController : MonoBehaviour
     [SerializeField] private KnowledgeManager knowledgeManager;
     [SerializeField] private GameScript gameManager;
     private int currentGameIndex = 0;
+    private bool isBtn1Clicked = false;
+    private bool isBtn2Clicked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,18 +61,18 @@ public class ComportementController : MonoBehaviour
                 infoName.text = infoData.infoName;
                 infoNumber.text = infoData.infoStat;
                 infos[i].GetComponent<Image>().color = infoData.infoColor;
-                
-                if (int.Parse(infoData.infoPercentage) <= 0)
+
+                if (infoData.infoPercentage <= 0)
                 {
-                    infoPercent.text = "▼" + infoData.infoPercentage + "%";
+                    infoPercent.text = "▼" + infoData.infoPercentage.ToString() + "%";
                     infoPercent.color = ColorUtility.TryParseHtmlString("#E00007", out Color color) ? color : Color.red;
                 }
                 else
                 {
-                    infoPercent.text = "▲" + infoData.infoPercentage + "%";
+                    infoPercent.text = "▲" + infoData.infoPercentage.ToString() + "%";
                     infoPercent.color = ColorUtility.TryParseHtmlString("#15ff00", out Color color) ? color : Color.green;
                 }
-                
+
             }
             else
             {
@@ -122,6 +124,12 @@ public class ComportementController : MonoBehaviour
             treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[i];
             Button treatBtn = treat[i].transform.Find("Button").GetComponent<Button>();
 
+            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
+            {
+                treatBtn.interactable = false;
+                return;
+            }
+
             if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
             {
                 treatBtn.interactable = true;
@@ -149,6 +157,7 @@ public class ComportementController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
+            isBtn1Clicked = true;
         }
         updateBtns();
     }
@@ -156,7 +165,7 @@ public class ComportementController : MonoBehaviour
     public void treatDataBtn2(Button p_button)
     {
         treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[1];
-        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
+        Debug.Log("treatDataBtn2 : " + t_treatData.treatName);
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
@@ -168,6 +177,7 @@ public class ComportementController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
+            isBtn2Clicked = true;
         }
         updateBtns();
     }
