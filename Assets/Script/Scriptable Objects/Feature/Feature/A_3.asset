@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5233b3a88cd81b4a94c229f5cc0f8f3, type: 3}
-  m_Name: Feature1
+  m_Name: A_3
   m_EditorClassIdentifier: Assembly-CSharp::FeatureSO
   isDark: 0
-  autonomy: 0
+  cost: 1
+  autonomy: 3
   social: 0
   competence: 0

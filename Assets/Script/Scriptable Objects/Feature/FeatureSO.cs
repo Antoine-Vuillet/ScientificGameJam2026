@@ -8,6 +8,7 @@ public class FeatureSO : ScriptableObject
 {
     public bool isDark;
     [Header("Objectifs")]
+    public int cost;
     [Range(0, 10)]
     public int autonomy;
     [Range(0, 10)]
