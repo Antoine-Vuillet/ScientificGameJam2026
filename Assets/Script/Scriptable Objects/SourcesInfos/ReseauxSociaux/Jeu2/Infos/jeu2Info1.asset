@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34eea1142d1b0b4aa49cef451376dee, type: 3}
   m_Name: jeu2Info1
   m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
-  commentProfilePicture: {fileID: 21300000, guid: 2cdbc106784d3144d998272eac890c05, type: 3}
-  commentUserName: Michelle Laaaa
-  commentMessage: "OK comp\xE9tence"
+  commentProfilePicture: {fileID: 21300000, guid: a165428991837c94989fbf27a384160c, type: 3}
+  commentUserName: Journal du gaming
+  commentMessage: "Le march\xE9 de l'occasion explose suite au dernier patch de difficult\xE9.
+    Les psychologues notent une hausse du syndrome du 'Lancer de Manette Spontan\xE9'."
   commentColor: {r: 0.9607844, g: 0.74509805, b: 0, a: 1}
   autonomy: 0
   social: 0

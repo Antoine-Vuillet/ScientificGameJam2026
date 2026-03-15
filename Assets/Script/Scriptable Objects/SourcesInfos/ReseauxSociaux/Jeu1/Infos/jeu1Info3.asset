@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34eea1142d1b0b4aa49cef451376dee, type: 3}
   m_Name: jeu1Info3
   m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
-  commentProfilePicture: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
-  commentUserName: Okokok okiokioki
-  commentMessage: Oui Bryan
+  commentProfilePicture: {fileID: 21300000, guid: a165428991837c94989fbf27a384160c, type: 3}
+  commentUserName: Charles
+  commentMessage: "J'ai lanc\xE9 le jeu, j'ai cliqu\xE9 sur 'Start', et un rat de
+    niveau 1 m'a One-Shot alors que j'\xE9tais encore en train de lire comment ouvrir
+    l'inventaire."
   commentColor: {r: 0.9622642, g: 0.7436471, b: 0, a: 1}
   autonomy: 0
   social: 0

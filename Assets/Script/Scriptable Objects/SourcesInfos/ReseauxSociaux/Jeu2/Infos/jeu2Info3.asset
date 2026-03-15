@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: jeu2Info3
   m_EditorClassIdentifier: Assembly-CSharp::rsProfilSO
   commentProfilePicture: {fileID: 21300000, guid: a165428991837c94989fbf27a384160c, type: 3}
-  commentUserName: Okokok okiokioki
-  commentMessage: Je suis autonome
+  commentUserName: Paul
+  commentMessage: "Le PNJ m'a demand\xE9 si je pr\xE9f\xE9rais sauver le village
+    ou le laisser br\xFBler. J'ai dit 'le laisser br\xFBler' et il m'a r\xE9pondu
+    'Haha, quelle blague ! Tiens, prends cette \xE9p\xE9e pour aller le sauver'."
   commentColor: {r: 0.42352945, g: 0.6392157, b: 0.86274517, a: 1}
   autonomy: 19
   social: 0
