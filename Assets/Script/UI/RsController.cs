@@ -22,6 +22,8 @@ public class RsController : MonoBehaviour
     [SerializeField] private GameScript gameManager;
 
     private int currentGameIndex = 0;
+    private bool isBtn1Clicked = false;
+    private bool isBtn2Clicked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -112,6 +114,12 @@ public class RsController : MonoBehaviour
             treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[i];
             Button treatBtn = treat[i].transform.Find("Button").GetComponent<Button>();
 
+            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
+            {
+                treatBtn.interactable = false;
+                return;
+            }
+
             if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
             {
                 treatBtn.interactable = true;
@@ -139,6 +147,8 @@ public class RsController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
+
+            isBtn1Clicked = true;
         }
         updateBtns();
     }
@@ -159,6 +169,7 @@ public class RsController : MonoBehaviour
                 scoreManager.AddMoralScore(1);
             }
         }
+        isBtn2Clicked = true;
         updateBtns();
     }
 
