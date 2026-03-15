@@ -104,17 +104,16 @@ public class gameplayController : MonoBehaviour
             treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[i];
             Button treatBtn = treat[i].transform.Find("Button").GetComponent<Button>();
 
-            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
-            {
-                treatBtn.interactable = false;
-                return;
-            }
-
             if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
             {
                 treatBtn.interactable = true;
             }
             else
+            {
+                treatBtn.interactable = false;
+            }
+
+            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
             {
                 treatBtn.interactable = false;
             }
