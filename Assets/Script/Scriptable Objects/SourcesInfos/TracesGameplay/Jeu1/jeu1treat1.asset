@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f2fbdc127bf81b4db228e2594297916, type: 3}
-  m_Name: Gameplay1
-  m_EditorClassIdentifier: Assembly-CSharp::gameplayProfilSO
-  message: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  cost: 0
-  autonomy: 0
-  social: 0
-  competence: 0
+  m_Script: {fileID: 11500000, guid: c123f755a9d89014b99961f622590fa9, type: 3}
+  m_Name: jeu1treat1
+  m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
+  treatName: frhguirehuirgh u
+  treatCost: 15
+  isDark: 0
+  treatedStats: 000000
