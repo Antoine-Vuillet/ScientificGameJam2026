@@ -11,10 +11,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip clic2;
     public AudioClip clic3;
     public AudioClip notifMail;
-    public AudioClip chaise;
+    
     public AudioClip notifPhone;
 
     public AudioClip achat;
+
+    public AudioClip chaise;
+    public AudioClip chaise2;
+    public AudioClip chaise3;
+
+    
+
+
 
     [Header("-------AudioClipMusic-------")]
     public AudioClip MusicMainMenu;
@@ -59,6 +67,24 @@ public class AudioManager : MonoBehaviour
                 break;
             case 3:
                 PlaySFX(clic3);
+                break;
+        }
+           
+    }
+
+    public void PlayChaise()
+    {
+        var id = Random.Range(1,4);
+        switch (id)
+        {
+            case 1:
+                PlaySFX(chaise);
+                break;
+            case 2:
+                PlaySFX(chaise2);
+                break;
+            case 3:
+                PlaySFX(chaise3);
                 break;
         }
            
