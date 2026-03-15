@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4dcf22bd8d185449b77955ff042cd7, type: 3}
   m_Name: jeu1Info3
   m_EditorClassIdentifier: Assembly-CSharp::comportementProfilSO
-  infoName: "Nombre de PNJ tu\xE9s"
-  infoStat: 69
-  infoPercentage: 3
+  infoName: Nombre de retry du tutoriel
+  infoStat: 203
+  infoPercentage: +70%
   infoColor: {r: 0.8039216, g: 0.62352943, b: 0, a: 1}

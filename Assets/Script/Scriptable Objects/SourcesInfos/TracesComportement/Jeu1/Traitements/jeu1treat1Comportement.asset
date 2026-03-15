@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c123f755a9d89014b99961f622590fa9, type: 3}
   m_Name: jeu1treat1Comportement
   m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
-  treatName: "Traitement \xE9thique"
+  treatName: Conseils d'un psychologue du dimanche
   treatCost: 1
   isDark: 0
   treatedStats: 000100
