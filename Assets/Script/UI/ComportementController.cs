@@ -6,15 +6,15 @@ using NaughtyAttributes;
 using TMPro;
 
 [Serializable]
-public class rsGame
+public class comportementGame
 {
     public List<infoRsSO> infos;
     public List<treatDataSO> treatButtonsInfo;
 }
 
-public class RsController : MonoBehaviour
+public class ComportementController : MonoBehaviour
 {
-    [SerializeField] private List<rsGame> GameList;
+    [SerializeField] private List<comportementGame> GameList;
     [SerializeField] private List<GameObject> infos;
     [SerializeField] private List<GameObject> treat;
 
@@ -81,18 +81,17 @@ public class RsController : MonoBehaviour
                 treatName.text = treatData.treatName;
                 treatCost.text = treatData.treatCost.ToString() + "€";
 
-                var pastilles = treatData.treatedStats;
-                Image[] icons = { autonomyIcon, socialIcon, competenceIcon };
-
-                for (int j = 0; j < pastilles.Count && j < icons.Length; j++)
-                {
-                    icons[j].gameObject.SetActive(pastilles[j]);
-                }
+                autonomyIcon.gameObject.SetActive(treatData.autonomy > 0);
+                socialIcon.gameObject.SetActive(treatData.social > 0);
+                competenceIcon.gameObject.SetActive(treatData.competence > 0);
             }
             else
             {
                 treatName.text = "";
                 treatCost.text = "";
+                autonomyIcon.gameObject.SetActive(false);
+                socialIcon.gameObject.SetActive(false);
+                competenceIcon.gameObject.SetActive(false);
             }
         }
     }
