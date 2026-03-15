@@ -8,7 +8,7 @@ using TMPro;
 [Serializable]
 public class comportementGame
 {
-    public List<infoRsSO> infos;
+    public List<infoComportementSO> infos;
     public List<treatDataSO> treatButtonsInfo;
 }
 
@@ -45,23 +45,34 @@ public class ComportementController : MonoBehaviour
     {
         for (int i = 0; i < infos.Count; i++)
         {
-            Image profilePicture = infos[i].transform.Find("ProfilePictureImg").GetComponent<Image>();
-            TextMeshProUGUI userName = infos[i].transform.Find("UserName").GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI message = infos[i].transform.Find("Commentary").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI infoName = infos[i].transform.Find("InfoName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI infoNumber = infos[i].transform.Find("DataContainer/InfoNumber").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI infoPercent = infos[i].transform.Find("DataContainer/InfoPercent").GetComponent<TextMeshProUGUI>();
 
             if (i < GameList[p_gameIndex].infos.Count)
             {
-                infoRsSO infoData = GameList[p_gameIndex].infos[i];
-                profilePicture.sprite = infoData.commentProfilePicture;
-                userName.text = infoData.commentUserName;
-                message.text = infoData.commentMessage;
-                infos[i].GetComponent<Image>().color = infoData.commentColor;
+                infoComportementSO infoData = GameList[p_gameIndex].infos[i];
+                infoName.text = infoData.infoName;
+                infoNumber.text = infoData.infoStat;
+                infos[i].GetComponent<Image>().color = infoData.infoColor;
+                
+                if (int.Parse(infoData.infoPercentage) <= 0)
+                {
+                    infoPercent.text = "▼" + infoData.infoPercentage + "%";
+                    infoPercent.color = ColorUtility.TryParseHtmlString("#E00007", out Color color) ? color : Color.red;
+                }
+                else
+                {
+                    infoPercent.text = "▲" + infoData.infoPercentage + "%";
+                    infoPercent.color = ColorUtility.TryParseHtmlString("#15ff00", out Color color) ? color : Color.green;
+                }
+                
             }
             else
             {
-                profilePicture.sprite = null;
-                userName.text = "";
-                message.text = "";
+                infoName.text = "";
+                infoNumber.text = "";
+                infoPercent.text = "";
                 infos[i].GetComponent<Image>().color = Color.clear;
             }
         }
