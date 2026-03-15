@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c123f755a9d89014b99961f622590fa9, type: 3}
-  m_Name: jeu2Treat1
+  m_Name: jeu2treat2Comportement
   m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
-  treatName: Traitement automatique du langage
-  treatCost: 1
-  isDark: 0
-  treatedStats: 010000
+  treatName: Traitement DARK
+  treatCost: 16
+  isDark: 1
+  treatedStats: 010101

@@ -1,0 +1,136 @@
+using UnityEngine;
+using System;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using NaughtyAttributes;
+using TMPro;
+
+[Serializable]
+public class rsGame
+{
+    public List<infoRsSO> infos;
+    public List<treatDataSO> treatButtonsInfo;
+}
+
+public class RsController : MonoBehaviour
+{
+    [SerializeField] private List<rsGame> GameList;
+    [SerializeField] private List<GameObject> infos;
+    [SerializeField] private List<GameObject> treat;
+    [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private KnowledgeManager knowledgeManager;
+    [SerializeField] private GameScript gameManager;
+
+    private int currentGameIndex = 0;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        updateInfos(currentGameIndex);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    [Button("Next Game")]
+    public void NextGame()
+    {
+        currentGameIndex++;
+        if (currentGameIndex < GameList.Count)
+        {
+            updateInfos(currentGameIndex);
+        }
+    }
+
+    private void updateInfos(int p_gameIndex)
+    {
+        for (int i = 0; i < infos.Count; i++)
+        {
+            Image profilePicture = infos[i].transform.Find("ProfilePictureImg").GetComponent<Image>();
+            TextMeshProUGUI userName = infos[i].transform.Find("UserName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI message = infos[i].transform.Find("Commentary").GetComponent<TextMeshProUGUI>();
+
+            if (i < GameList[p_gameIndex].infos.Count)
+            {
+                infoRsSO infoData = GameList[p_gameIndex].infos[i];
+                profilePicture.sprite = infoData.commentProfilePicture;
+                userName.text = infoData.commentUserName;
+                message.text = infoData.commentMessage;
+                infos[i].GetComponent<Image>().color = infoData.commentColor;
+            }
+            else
+            {
+                profilePicture.sprite = null;
+                userName.text = "";
+                message.text = "";
+                infos[i].GetComponent<Image>().color = Color.clear;
+            }
+        }
+
+        for (int i = 0; i < treat.Count; i++)
+        {
+            TextMeshProUGUI treatName = treat[i].transform.Find("TextAndPastilles/TreatName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI treatCost = treat[i].transform.Find("Button/TreatCost").GetComponent<TextMeshProUGUI>();
+
+            Image autonomyIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Autonomy").GetComponent<Image>();
+            Image socialIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Social").GetComponent<Image>();
+            Image competenceIcon = treat[i].transform.Find("TextAndPastilles/Pastilles/Competence").GetComponent<Image>();
+
+            if (i < GameList[p_gameIndex].treatButtonsInfo.Count)
+            {
+                treatDataSO treatData = GameList[p_gameIndex].treatButtonsInfo[i];
+                treatName.text = treatData.treatName;
+                treatCost.text = treatData.treatCost.ToString() + "€";
+
+                var pastilles = treatData.treatedStats;
+                Image[] icons = { autonomyIcon, socialIcon, competenceIcon };
+
+                for (int j = 0; j < pastilles.Count && j < icons.Length; j++)
+                {
+                    icons[j].gameObject.SetActive(pastilles[j]);
+                }
+            }
+            else
+            {
+                treatName.text = "";
+                treatCost.text = "";
+                autonomyIcon.gameObject.SetActive(false);
+                socialIcon.gameObject.SetActive(false);
+                competenceIcon.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void treatDataBtn1()
+    {
+        treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[0];
+        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
+        knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+
+        gameManager.usedMoney -= t_treatData.treatCost;
+
+        if (t_treatData.isDark)
+        {
+            scoreManager.AddMoralScore(1);
+        }
+    }
+
+    public void treatDataBtn2()
+    {
+        treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[1];
+        Debug.Log("treatDataBtn2 : " + t_treatData.treatName);
+        knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+
+        gameManager.usedMoney -= t_treatData.treatCost;
+
+        if (t_treatData.isDark)
+        {
+            scoreManager.AddMoralScore(1);
+        }
+    }
+
+    // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>
+    // <a href="https://www.flaticon.com/fr/icones-gratuites/maman" title="maman icônes">Maman icônes créées par Freepik - Flaticon</a>
+}
