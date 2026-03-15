@@ -114,17 +114,16 @@ public class RsController : MonoBehaviour
             treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[i];
             Button treatBtn = treat[i].transform.Find("Button").GetComponent<Button>();
 
-            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
-            {
-                treatBtn.interactable = false;
-                return;
-            }
 
             if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
             {
                 treatBtn.interactable = true;
             }
             else
+            {
+                treatBtn.interactable = false;
+            }
+            if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
             {
                 treatBtn.interactable = false;
             }
@@ -156,7 +155,7 @@ public class RsController : MonoBehaviour
     public void treatDataBtn2(Button p_button)
     {
         treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[1];
-        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
+        Debug.Log("treatDataBtn2 : " + t_treatData.treatName);
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
@@ -168,8 +167,8 @@ public class RsController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
-        }
         isBtn2Clicked = true;
+        }
         updateBtns();
     }
 
