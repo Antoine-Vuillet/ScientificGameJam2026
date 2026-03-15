@@ -156,7 +156,7 @@ public class RsController : MonoBehaviour
     public void treatDataBtn2(Button p_button)
     {
         treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[1];
-        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
+        Debug.Log("treatDataBtn2 : " + t_treatData.treatName);
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
@@ -168,8 +168,8 @@ public class RsController : MonoBehaviour
             {
                 scoreManager.AddMoralScore(1);
             }
-        }
         isBtn2Clicked = true;
+        }
         updateBtns();
     }
 
