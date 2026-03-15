@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c123f755a9d89014b99961f622590fa9, type: 3}
   m_Name: jeu2treat2Comportement
   m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
-  treatName: Traitement DARK
-  treatCost: 16
+  treatName: Historiques bancaires chez darknet.dictator.gouv
+  treatCost: 1
   isDark: 1
-  treatedStats: 010101
+  treatedStats: 000101

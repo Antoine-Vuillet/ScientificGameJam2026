@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4dcf22bd8d185449b77955ff042cd7, type: 3}
   m_Name: jeu2Info1
   m_EditorClassIdentifier: Assembly-CSharp::comportementProfilSO
-  infoName: Nombre de rage quit
-  infoStat: 8946
-  infoPercentage: -89
+  infoName: Taux de skip du tutoriel
+  infoStat: 2672
+  infoPercentage: +120%
   infoColor: {r: 0.34901962, g: 0.53333336, b: 0.72156864, a: 1}

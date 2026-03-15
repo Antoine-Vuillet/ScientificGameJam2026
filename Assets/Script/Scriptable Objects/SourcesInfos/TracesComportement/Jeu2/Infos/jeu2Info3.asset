@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4dcf22bd8d185449b77955ff042cd7, type: 3}
   m_Name: jeu2Info3
   m_EditorClassIdentifier: Assembly-CSharp::comportementProfilSO
-  infoName: Nombre de trades entre joueurs
-  infoStat: 9963
-  infoPercentage: 58
+  infoName: Taux de rage-quit
+  infoStat: 408
+  infoPercentage: +283%
   infoColor: {r: 0.8039216, g: 0.62352943, b: 0, a: 1}

@@ -26,6 +26,7 @@ public class RsController : MonoBehaviour
     void Start()
     {
         updateInfos(currentGameIndex);
+        updateBtns();
     }
 
     // Update is called once per frame
@@ -41,6 +42,7 @@ public class RsController : MonoBehaviour
         if (currentGameIndex < GameList.Count)
         {
             updateInfos(currentGameIndex);
+            updateBtns();
         }
     }
 
@@ -103,32 +105,61 @@ public class RsController : MonoBehaviour
         }
     }
 
-    public void treatDataBtn1()
+    public void updateBtns()
     {
-        treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[0];
-        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
-        knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
-
-        gameManager.usedMoney -= t_treatData.treatCost;
-
-        if (t_treatData.isDark)
+        for (int i = 0; i < treat.Count; i++)
         {
-            scoreManager.AddMoralScore(1);
+            treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[i];
+            Button treatBtn = treat[i].transform.Find("Button").GetComponent<Button>();
+
+            if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
+            {
+                treatBtn.interactable = true;
+            }
+            else
+            {
+                treatBtn.interactable = false;
+            }
+
         }
     }
 
-    public void treatDataBtn2()
+    public void treatDataBtn1(Button p_button)
+    {
+        treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[0];
+        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
+
+        if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
+        {
+            knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+
+            gameManager.usedMoney += t_treatData.treatCost;
+
+            if (t_treatData.isDark)
+            {
+                scoreManager.AddMoralScore(1);
+            }
+        }
+        updateBtns();
+    }
+
+    public void treatDataBtn2(Button p_button)
     {
         treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[1];
-        Debug.Log("treatDataBtn2 : " + t_treatData.treatName);
-        knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+        Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
 
-        gameManager.usedMoney -= t_treatData.treatCost;
-
-        if (t_treatData.isDark)
+        if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
-            scoreManager.AddMoralScore(1);
+            knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
+
+            gameManager.usedMoney += t_treatData.treatCost;
+
+            if (t_treatData.isDark)
+            {
+                scoreManager.AddMoralScore(1);
+            }
         }
+        updateBtns();
     }
 
     // TODO Credit to be added : <a href="https://www.flaticon.com/fr/icones-gratuites/frere" title="frère icônes">Frère icônes créées par Freepik - Flaticon</a>

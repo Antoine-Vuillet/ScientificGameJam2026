@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &726993072463219197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375109026957485, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_text
+      value: "Votre nom n'est pas seulement associ\xE9 \xE0 la richesse, il est devenu
+        un label de qualit\xE9. Vous ne poss\xE9dez pas seulement le march\xE9, vous
+        poss\xE9dez le c\u0153ur des joueurs. Vous avez cr\xE9\xE9 une \u0153uvre
+        qui survivra aux tendances et aux r\xE9gulations.\r\n\r\nUne industrie o\xF9
+        la finance et la cr\xE9ativit\xE9 pourraient discuter de mani\xE8re harmonieuse.\r\n\r\nContrairement
+        aux mod\xE8les pr\xE9dateurs de micro-transactions souvent critiqu\xE9s,
+        vous avez mis\xE9 sur des jeux avec un contenu massif et honn\xEAte. Votre
+        rentabilit\xE9 prouve que le respect de l'intelligence du joueur est un investissement
+        plus s\xFBr que l'exploitation de ses faiblesses..\r\n\r\nEn appliquant le
+        principe du Privacy by Design (concept cl\xE9 du RGPD), vous avez prouv\xE9
+        que l'on n'a pas besoin de profiler les utilisateurs \xE0 outrance pour les
+        comprendre. Le succ\xE8s montre que tout ne peut pas reposer sur la data."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_fontSize
+      value: 32.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538630964908190378, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692976420334655074, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036913533238235650, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_text
+      value: Fin 2/4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428201122840677452, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_text
+      value: 'LE SOMMET DU RESPECT :'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611383162027336875, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648796707263838598, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818770706269346562, guid: 69207e39e0b0521448828591e04df410, type: 3}
+      propertyPath: m_Name
+      value: EndScreen_RicheMoral
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69207e39e0b0521448828591e04df410, type: 3}

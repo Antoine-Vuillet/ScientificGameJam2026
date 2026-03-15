@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: jeu1treat2Comportement
   m_EditorClassIdentifier: Assembly-CSharp::treatDataSO
   treatName: Traitement sympa
-  treatCost: 16
+  treatCost: 1
   isDark: 0
   treatedStats: 010000
