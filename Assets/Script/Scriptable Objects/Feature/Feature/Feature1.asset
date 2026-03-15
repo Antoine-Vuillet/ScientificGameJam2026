@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5233b3a88cd81b4a94c229f5cc0f8f3, type: 3}
   m_Name: Feature1
   m_EditorClassIdentifier: Assembly-CSharp::FeatureSO
-  price: 2
   isDark: 0
-  autonomy: 1
-  social: 1
-  competence: 1
+  autonomy: 0
+  social: 0
+  competence: 0
