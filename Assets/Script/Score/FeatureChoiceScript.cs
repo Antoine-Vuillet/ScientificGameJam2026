@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,16 +13,46 @@ public class FeatureChoiceScript : MonoBehaviour
     [SerializeField]private Slider autonomySlider;
     [SerializeField]private Slider socialSlider;
     private List<Toggle> toggles = new List<Toggle>();
-    
-    public void OnToggleValueChanged(bool value, Toggle toggle)
+    private bool genreChosen;
+
+
+    public void Reset()
+    {
+        print("Hoy");
+        competenceSlider.value = 0;
+        autonomySlider.value = 0;
+        socialSlider.value = 0;
+    }
+
+
+    public void OnToggleValueChanged(bool value, Toggle toggle, bool isGenre)
     {
         if (value)
         {
-            toggles.Add(toggle);
+            if ((ourGame.usedMoney+toggle.GetComponent<FeatureScript>().feature.cost > ourGame.maxMoney) || (genreChosen && isGenre))
+            {
+                toggle.isOn = false;
+            }
+            else
+            {
+                if (isGenre)
+                {
+                    genreChosen = true;
+                }
+                ourGame.usedMoney+=toggle.GetComponent<FeatureScript>().feature.cost;
+                toggles.Add(toggle);
+            }
         }
         else
         {
-            toggles.Remove(toggle);
+            if (toggles.Remove(toggle))
+            {
+                if (isGenre)
+                {
+                    genreChosen = false;
+                }
+                ourGame.usedMoney-=toggle.GetComponent<FeatureScript>().feature.cost;
+            }
         }
         CalculateStats();
     }
