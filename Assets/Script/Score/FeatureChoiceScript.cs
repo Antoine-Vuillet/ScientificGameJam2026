@@ -17,11 +17,23 @@ public class FeatureChoiceScript : MonoBehaviour
     {
         if (value)
         {
-            toggles.Add(toggle);
+            print(ourGame.usedMoney + " + "+ourGame.maxMoney);
+            if (ourGame.usedMoney >= ourGame.maxMoney)
+            {
+                toggle.isOn = false;
+            }
+            else
+            {
+                ourGame.usedMoney+=toggle.GetComponent<FeatureScript>().feature.cost;
+                toggles.Add(toggle);
+            }
         }
         else
         {
-            toggles.Remove(toggle);
+            if (toggles.Remove(toggle))
+            {
+                ourGame.usedMoney-=toggle.GetComponent<FeatureScript>().feature.cost;
+            }
         }
         CalculateStats();
     }
