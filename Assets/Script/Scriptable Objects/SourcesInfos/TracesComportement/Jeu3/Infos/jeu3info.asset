@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4dcf22bd8d185449b77955ff042cd7, type: 3}
   m_Name: jeu3info
   m_EditorClassIdentifier: Assembly-CSharp::comportementProfilSO
-  infoName: Nombre de jeux lalalal lalalal
-  infoStat: 1568
-  infoPercentage: 10
-  infoColor: {r: 0.47843137, g: 0.70980394, b: 0.34117648, a: 1}
+  infoName: Taux de click sur les pop-up promotionnelles
+  infoStat: 168
+  infoPercentage: +91%
+  infoColor: {r: 0.34901962, g: 0.53333336, b: 0.72156864, a: 1}
