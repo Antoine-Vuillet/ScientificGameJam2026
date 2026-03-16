@@ -311,6 +311,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: fd6ab76a48a46e14da48b206c738faf1, type: 3}
     - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: chaise
+      value: 
+      objectReference: {fileID: 8300000, guid: fd285ab36bdcd104daa4ea184e0a96b8, type: 3}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: chaise2
+      value: 
+      objectReference: {fileID: 8300000, guid: 702bf8d5ca2ee51418815a7a0fae696f, type: 3}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
+      propertyPath: chaise3
+      value: 
+      objectReference: {fileID: 8300000, guid: bec2952a88c9f6040af8e3729a0be610, type: 3}
+    - target: {fileID: 8546578369593133969, guid: 1219654ea2d6518499b59718c5ed9965, type: 3}
       propertyPath: MusicInGame
       value: 
       objectReference: {fileID: 8300000, guid: e188fb788dd886f40990b7d8ae613ef7, type: 3}

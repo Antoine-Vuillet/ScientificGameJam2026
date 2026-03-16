@@ -16,10 +16,13 @@ public class CinemachineSwitcher : MonoBehaviour
     [SerializeField] private GameObject GraphAutonomie;
     [SerializeField] private GameObject GraphCompetence;
     [SerializeField] private GameObject GraphLienSocial;
+
+    private AudioManager _audioManager;
     
     void Awake()
     {
         animator = GetComponent<Animator>();
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void SwitchPhone()
@@ -50,12 +53,16 @@ public class CinemachineSwitcher : MonoBehaviour
     {
         if (baseCamera)
         {
+            _audioManager.PlayClic();
+            _audioManager.PlayChaise();
             animator.Play("LaptopCamera");
             baseCanvas.enabled = false;
             Invoke("LateOpenLaptop", 1.9f);
         }
         else
         {
+            _audioManager.PlayClic();
+            _audioManager.PlayChaise();
             animator.Play("BaseCamera");
             baseCanvas.enabled = true;
             laptopCanvas.enabled = false;
@@ -74,12 +81,16 @@ public class CinemachineSwitcher : MonoBehaviour
     {
         if (baseCamera)
         {
+            _audioManager.PlayClic();
+            _audioManager.PlayChaise();
             animator.Play("Screen1Camera");
             baseCanvas.enabled = false;
             Invoke("LateOpenScreen1", 1.9f);
         }
         else
         {
+            _audioManager.PlayClic();
+            _audioManager.PlayChaise();
             animator.Play("BaseCamera");
             baseCanvas.enabled = true;
             screen1Canvas.enabled = false;
@@ -96,12 +107,16 @@ public class CinemachineSwitcher : MonoBehaviour
     {
         if (baseCamera)
         {
+            _audioManager.PlayClic();
+            _audioManager.PlayChaise();
             animator.Play("Screen2Camera");
             baseCanvas.enabled = false;
             Invoke("LateOpenScreen2", 1.9f);
         }
         else
         {
+            _audioManager.PlayClic();
+            _audioManager.PlayChaise();
             animator.Play("BaseCamera");
             baseCanvas.enabled = true;
             screen2Canvas.enabled = false;
