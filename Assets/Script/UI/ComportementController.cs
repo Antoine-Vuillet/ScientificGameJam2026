@@ -23,7 +23,12 @@ public class ComportementController : MonoBehaviour
     private int currentGameIndex = 0;
     private bool isBtn1Clicked = false;
     private bool isBtn2Clicked = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         updateInfos(currentGameIndex);
@@ -148,6 +153,7 @@ public class ComportementController : MonoBehaviour
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
+            _audioManager.PlaySFX(_audioManager.achat);
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;
@@ -168,6 +174,7 @@ public class ComportementController : MonoBehaviour
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
+            _audioManager.PlaySFX(_audioManager.achat);
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;

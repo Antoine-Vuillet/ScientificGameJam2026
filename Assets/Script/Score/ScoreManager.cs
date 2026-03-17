@@ -18,6 +18,14 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Canvas EndingRA;
     [SerializeField] private Canvas EndingRM;
 
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     private void Start()
     {
         currentDay = 0;
@@ -70,6 +78,9 @@ public class ScoreManager : MonoBehaviour
 
     public void FinishDay(GameScript ourGame)
     {
+
+        _audioManager.PlaySFX(_audioManager.notifMail);
+        _audioManager.PlayClic();
         if (currentDay < 2)
         {
             jeuSO currentGame = dailyGames[currentDay];
@@ -88,6 +99,9 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
+            _audioManager.StopMusic();
+    
+            _audioManager.PlayMusic(_audioManager.MusicEndGame);
             if (moralScore>=3)
             {
                 if (financialScore >=8)

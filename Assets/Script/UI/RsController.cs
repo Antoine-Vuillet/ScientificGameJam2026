@@ -24,7 +24,12 @@ public class RsController : MonoBehaviour
     private int currentGameIndex = 0;
     private bool isBtn1Clicked = false;
     private bool isBtn2Clicked = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         updateInfos(currentGameIndex);
@@ -133,11 +138,13 @@ public class RsController : MonoBehaviour
 
     public void treatDataBtn1(Button p_button)
     {
+        
         treatDataSO t_treatData = GameList[currentGameIndex].treatButtonsInfo[0];
         Debug.Log("treatDataBtn1 : " + t_treatData.treatName);
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
+            _audioManager.PlaySFX(_audioManager.achat);
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;
@@ -159,6 +166,7 @@ public class RsController : MonoBehaviour
 
         if (gameManager.usedMoney + t_treatData.treatCost <= gameManager.maxMoney)
         {
+            _audioManager.PlaySFX(_audioManager.achat);
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;

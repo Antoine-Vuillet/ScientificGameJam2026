@@ -18,6 +18,7 @@ public class ReturnMenu : MonoBehaviour
         _audioManager.PlayClic();
         _audioManager.StopMusic();
         _sceneLoader.SceneLoading("MenuStartScene");
+        _audioManager.PlayMusic(_audioManager.MusicMainMenu);
 
     }
 }
