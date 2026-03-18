@@ -54,6 +54,7 @@ public class ScoreManager : MonoBehaviour
     public void AddFinancialScore(int value)
     {
         financialScore += value;
+        print("Financial score: " + financialScore);
     }
 
     private int CalcValue(int ourGameVal, int wishedGameVal)
@@ -81,24 +82,25 @@ public class ScoreManager : MonoBehaviour
 
         _audioManager.PlaySFX(_audioManager.notifMail);
         _audioManager.PlayClic();
+        jeuSO currentGame = dailyGames[currentDay];
+        int value = CalcValue(currentGame.autonomy, ourGame.GetGameStats().autonomy);
+        value += CalcValue(currentGame.competence, ourGame.GetGameStats().competence);
+        value += CalcValue(currentGame.social, ourGame.GetGameStats().social);
+        AddFinancialScore(value);
+        AddMoralScore(ourGame.GetPatternCount());
         if (currentDay < 2)
         {
-            jeuSO currentGame = dailyGames[currentDay];
-            int value = CalcValue(currentGame.autonomy, ourGame.GetGameStats().autonomy);
-            value += CalcValue(currentGame.competence, ourGame.GetGameStats().competence);
-            value += CalcValue(currentGame.social, ourGame.GetGameStats().social);
-            AddFinancialScore(value);
-            AddMoralScore(ourGame.GetPatternCount());
             ourGame.Reset();
             GetComponent<KnowledgeManager>().ResetKnowledge();
             reseauController.NextGame();
             _gameplayController.NextGame();
             _comportementController.NextGame();
             _featureChoiceScript.Reset();
-            currentDay++;
+            NextDay();
         }
         else
         {
+            print(financialScore);
             _audioManager.StopMusic();
     
             _audioManager.PlayMusic(_audioManager.MusicEndGame);

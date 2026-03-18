@@ -18,7 +18,10 @@ public class FeatureChoiceScript : MonoBehaviour
 
     public void Reset()
     {
-        print("Hoy");
+        for (int i = toggles.Count; i > 0; i--)
+        {
+            toggles[i-1].isOn = false;
+        }
         competenceSlider.value = 0;
         autonomySlider.value = 0;
         socialSlider.value = 0;
@@ -67,12 +70,18 @@ public class FeatureChoiceScript : MonoBehaviour
         int competence = 0;
         int autonomy = 0;
         int social = 0;
+        int moralscore = 0;
         foreach (var toggle in toggles)
         {
             competence += toggle.GetComponent<FeatureScript>().feature.competence;
             autonomy += toggle.GetComponent<FeatureScript>().feature.autonomy;
             social += toggle.GetComponent<FeatureScript>().feature.social;
+            if (toggle.GetComponent<FeatureScript>().feature.isDark)
+            {
+                moralscore++;
+            }
         }
+        ourGame.SetPatternCount(moralscore);
         autonomySlider.value = autonomy;
         competenceSlider.value = competence;
         socialSlider.value = social;

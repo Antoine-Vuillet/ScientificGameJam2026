@@ -28,6 +28,7 @@ public class GameScript : MonoBehaviour
         gameStats.autonomy = 0;
         gameStats.competence = 0;
         gameStats.social = 0;
+        patternCount = 0;
     }
 
     public void SetGameStats(int autonomy, int competence, int social)
@@ -40,6 +41,11 @@ public class GameScript : MonoBehaviour
     public int GetPatternCount()
     {
         return patternCount;
+    }
+
+    public void SetPatternCount(int value)
+    {
+        patternCount = value;
     }
 
     public stats GetGameStats()
