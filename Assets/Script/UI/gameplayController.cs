@@ -50,6 +50,8 @@ public class gameplayController : MonoBehaviour
         if (currentGameIndex < GameList.Count)
         {
             updateInfos(currentGameIndex);
+            isBtn1Clicked = false;
+            isBtn2Clicked = false;
             updateBtns();
         }
     }
