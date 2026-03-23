@@ -20,6 +20,7 @@ public class RsController : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private KnowledgeManager knowledgeManager;
     [SerializeField] private GameScript gameManager;
+    [SerializeField] private GameEventSO budgetUpdateEvent;
 
     private int currentGameIndex = 0;
     private bool isBtn1Clicked = false;
@@ -150,6 +151,7 @@ public class RsController : MonoBehaviour
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;
+            budgetUpdateEvent.Raise(this, EventArgs.Empty);
 
             if (t_treatData.isDark)
             {
@@ -172,6 +174,7 @@ public class RsController : MonoBehaviour
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;
+            budgetUpdateEvent.Raise(this, EventArgs.Empty);
 
             if (t_treatData.isDark)
             {

@@ -12,6 +12,7 @@ public class FeatureChoiceScript : MonoBehaviour
     [SerializeField]private Slider competenceSlider;
     [SerializeField]private Slider autonomySlider;
     [SerializeField]private Slider socialSlider;
+    [SerializeField] private GameEventSO budgetUpdateEvent;
     private List<Toggle> toggles = new List<Toggle>();
     private bool genreChosen;
 
@@ -44,6 +45,7 @@ public class FeatureChoiceScript : MonoBehaviour
                 }
                 ourGame.usedMoney+=toggle.GetComponent<FeatureScript>().feature.cost;
                 toggles.Add(toggle);
+                budgetUpdateEvent.Raise(this, EventArgs.Empty);
             }
         }
         else
@@ -55,6 +57,7 @@ public class FeatureChoiceScript : MonoBehaviour
                     genreChosen = false;
                 }
                 ourGame.usedMoney-=toggle.GetComponent<FeatureScript>().feature.cost;
+                budgetUpdateEvent.Raise(this, EventArgs.Empty);
             }
         }
         CalculateStats();

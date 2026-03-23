@@ -22,6 +22,7 @@ public class gameplayController : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private KnowledgeManager knowledgeManager;
     [SerializeField] private GameScript gameManager;
+    [SerializeField] private GameEventSO budgetUpdateEvent;
     private int currentGameIndex = 0;
     private bool isBtn1Clicked = false;
     private bool isBtn2Clicked = false;
@@ -138,6 +139,7 @@ public class gameplayController : MonoBehaviour
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;
+            budgetUpdateEvent.Raise(this, EventArgs.Empty);
 
             if (t_treatData.isDark)
             {
@@ -159,6 +161,7 @@ public class gameplayController : MonoBehaviour
             knowledgeManager.setKnowledge(t_treatData.treatedStats[0], t_treatData.treatedStats[1], t_treatData.treatedStats[2]);
 
             gameManager.usedMoney += t_treatData.treatCost;
+            budgetUpdateEvent.Raise(this, EventArgs.Empty);
 
             if (t_treatData.isDark)
             {

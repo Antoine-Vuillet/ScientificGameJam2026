@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseCredit
   creditCanvas: {fileID: 8150380763190349926}
+  MenuCanvas: {fileID: 0}
 --- !u!114 &1111323516908812003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseCredit
   creditCanvas: {fileID: 8150380763190349926}
+  MenuCanvas: {fileID: 0}
 --- !u!1 &7347525023896692101
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5052437217781537085
 RectTransform:
   m_ObjectHideFlags: 0
