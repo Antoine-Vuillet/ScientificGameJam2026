@@ -87,7 +87,7 @@ public class gameplayController : MonoBehaviour
                 treatCost.text = treatData.treatCost.ToString() + "€";
 
                 var pastilles = treatData.treatedStats;
-                Image[] icons = { autonomyIcon, competenceIcon, socialIcon };
+                Image[] icons = { autonomyIcon, socialIcon, competenceIcon };
 
                 for (int j = 0; j < pastilles.Count && j < icons.Length; j++)
                 {
