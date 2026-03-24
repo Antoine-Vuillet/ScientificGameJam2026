@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private gameplayController _gameplayController;
     [SerializeField] private ComportementController _comportementController;
     [SerializeField] private FeatureChoiceScript _featureChoiceScript;
+    [SerializeField] private GameEventSO _gameEventSo;
 
     [SerializeField] private Canvas EndingPA;
     [SerializeField] private Canvas EndingPM;
@@ -96,6 +97,7 @@ public class ScoreManager : MonoBehaviour
             _comportementController.NextGame();
             _featureChoiceScript.Reset();
             ourGame.Reset();
+            _gameEventSo.Raise(this, EventArgs.Empty);
             NextDay();
         }
         else
