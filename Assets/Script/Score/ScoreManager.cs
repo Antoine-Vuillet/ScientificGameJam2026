@@ -90,12 +90,12 @@ public class ScoreManager : MonoBehaviour
         AddMoralScore(ourGame.GetPatternCount());
         if (currentDay < 2)
         {
-            ourGame.Reset();
             GetComponent<KnowledgeManager>().ResetKnowledge();
             reseauController.NextGame();
             _gameplayController.NextGame();
             _comportementController.NextGame();
             _featureChoiceScript.Reset();
+            ourGame.Reset();
             NextDay();
         }
         else
