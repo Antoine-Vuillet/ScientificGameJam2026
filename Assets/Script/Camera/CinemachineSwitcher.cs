@@ -44,9 +44,9 @@ public class CinemachineSwitcher : MonoBehaviour
 
     public void LateOpenPhone()
     {
-        phoneCanvas.enabled = true;
         RsController rsController =phoneCanvas.transform.Find("PhoneMask/Panel").GetComponent<RsController>();
         rsController.updateBtns();
+        phoneCanvas.enabled = true;
     }
 
     public void SwitchLaptop()
@@ -72,9 +72,9 @@ public class CinemachineSwitcher : MonoBehaviour
 
     public void LateOpenLaptop()
     {
-        laptopCanvas.enabled = true;
         ComportementController comportementController = laptopCanvas.GetComponent<ComportementController>();
         comportementController.updateBtns();
+        laptopCanvas.enabled = true;
     }
     
     public void SwitchScreen1()
@@ -100,6 +100,9 @@ public class CinemachineSwitcher : MonoBehaviour
 
     public void LateOpenScreen1()
     {
+        FeatureChoiceScript featureChoiceScript = screen1Canvas.transform.Find("Panel/HorizontalBox/Survey").GetComponent<FeatureChoiceScript>();
+        featureChoiceScript.UpdateGenreTextColors();
+        featureChoiceScript.UpdateAllToggleColors();
         screen1Canvas.enabled = true;
     }
     
