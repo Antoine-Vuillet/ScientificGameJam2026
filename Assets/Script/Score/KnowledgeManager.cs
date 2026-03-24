@@ -39,7 +39,7 @@ public class KnowledgeManager : MonoBehaviour
         socialVal = 0;
     }
 
-    public void setKnowledge(bool auto, bool comp, bool social)
+    public void setKnowledge(bool auto, bool social, bool comp)
     {
         print("yoyoyo");
         int upperChange;

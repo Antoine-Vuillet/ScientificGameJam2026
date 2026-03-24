@@ -25,6 +25,7 @@ public class GameScript : MonoBehaviour
     public void Reset()
     {
         maxMoney = manager.dailyGames[manager.currentDay].budget;
+        usedMoney = 0;
         gameStats.autonomy = 0;
         gameStats.competence = 0;
         gameStats.social = 0;

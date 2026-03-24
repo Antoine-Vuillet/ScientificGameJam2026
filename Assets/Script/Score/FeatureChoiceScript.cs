@@ -124,7 +124,6 @@ public class FeatureChoiceScript : MonoBehaviour
                 }
                 ourGame.usedMoney += toggle.GetComponent<FeatureScript>().feature.cost;
                 toggles.Add(toggle);
-                budgetUpdateEvent.Raise(this, EventArgs.Empty);
             }
         }
         else
@@ -137,9 +136,9 @@ public class FeatureChoiceScript : MonoBehaviour
                     selectedGenreToggle = null;
                 }
                 ourGame.usedMoney -= toggle.GetComponent<FeatureScript>().feature.cost;
-                budgetUpdateEvent.Raise(this, EventArgs.Empty);
             }
         }
+        budgetUpdateEvent.Raise(this, EventArgs.Empty);
         UpdateGenreTextColors();
         UpdateAllToggleColors();
         CalculateStats();
