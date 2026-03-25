@@ -90,12 +90,19 @@ public class CinemachineSwitcher : MonoBehaviour
         else
         {
             _audioManager.PlayClic();
-            _audioManager.PlayChaise();
-            animator.Play("BaseCamera");
-            baseCanvas.enabled = true;
-            screen1Canvas.enabled = false;
+            LeaveScreen1();
+            
         }
         baseCamera = !baseCamera;
+    }
+
+    public void LeaveScreen1()
+    {
+        _audioManager.PlayChaise();
+        baseCanvas.enabled = true;
+        screen1Canvas.enabled = false;
+        animator.Play("BaseCamera");
+        
     }
 
     public void LateOpenScreen1()

@@ -13,6 +13,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private ComportementController _comportementController;
     [SerializeField] private FeatureChoiceScript _featureChoiceScript;
     [SerializeField] private GameEventSO _gameEventSo;
+    [SerializeField] private CinemachineSwitcher _cinemachineSwitcher;
+    
 
     [SerializeField] private Canvas EndingPA;
     [SerializeField] private Canvas EndingPM;
@@ -91,6 +93,7 @@ public class ScoreManager : MonoBehaviour
         AddMoralScore(ourGame.GetPatternCount());
         if (currentDay < 2)
         {
+            _cinemachineSwitcher.LeaveScreen1();
             GetComponent<KnowledgeManager>().ResetKnowledge();
             reseauController.NextGame();
             _gameplayController.NextGame();
@@ -98,6 +101,7 @@ public class ScoreManager : MonoBehaviour
             _featureChoiceScript.Reset();
             ourGame.Reset();
             _gameEventSo.Raise(this, EventArgs.Empty);
+            
             NextDay();
         }
         else
