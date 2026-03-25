@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class OpenWindowMail : MonoBehaviour
+public class CloseMail : MonoBehaviour
 {
-    [SerializeField] private GameObject mailWindows;
+    [SerializeField] private GameObject mailTutoWindows;
     private AudioManager _audioManager;
 
     private void Awake()
@@ -11,9 +11,9 @@ public class OpenWindowMail : MonoBehaviour
     }
 
 
-    public void OpenWindowMailOnClick()
+    public void ClosedMailOnClick()
     {
         _audioManager.PlayClic();
-        mailWindows.SetActive(true);
+        mailTutoWindows.SetActive(false);
     }
 }
