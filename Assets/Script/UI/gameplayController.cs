@@ -50,6 +50,7 @@ public class gameplayController : MonoBehaviour
         currentGameIndex++;
         if (currentGameIndex < GameList.Count)
         {
+            Debug.Log("Next Game: " + currentGameIndex);
             updateInfos(currentGameIndex);
             isBtn1Clicked = false;
             isBtn2Clicked = false;
@@ -124,6 +125,10 @@ public class gameplayController : MonoBehaviour
             if (isBtn1Clicked && i == 0 || isBtn2Clicked && i == 1)
             {
                 treatBtn.interactable = false;
+            }
+            else
+            {
+                treatBtn.interactable = true;
             }
         }
     }

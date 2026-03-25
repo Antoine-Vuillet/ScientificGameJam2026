@@ -145,6 +145,10 @@ public class ComportementController : MonoBehaviour
             {
                 treatBtn.interactable = false;
             }
+            else
+            {
+                treatBtn.interactable = true;
+            }
 
         }
     }

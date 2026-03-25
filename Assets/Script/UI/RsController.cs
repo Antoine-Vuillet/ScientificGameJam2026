@@ -135,6 +135,10 @@ public class RsController : MonoBehaviour
             {
                 treatBtn.interactable = false;
             }
+            else
+            {
+                treatBtn.interactable = true;
+            }
 
         }
     }
